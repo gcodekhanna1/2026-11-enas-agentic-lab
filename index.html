@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Building Agentic AI — ENAS 2170 Lab Guides</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#eef1f6;color:#172335;font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+a{color:#075da8}.muted{color:#5a6878}
+.strip{height:clamp(140px,26vw,300px);background:#0b0c12 center 50%/cover no-repeat}.strip.plain{height:90px;background:linear-gradient(90deg,#ff8a3d,#e0409b,#7b4dff,#2f6bff)}
+main{max-width:760px;margin:-40px auto 40px;background:#fff;border-radius:14px;padding:34px 40px;position:relative;box-shadow:0 8px 30px #0f1b3320}
+.kicker{text-transform:uppercase;letter-spacing:.12em;font-size:.75em;color:#7b4dff;font-weight:700}
+h1{margin:.1em 0;color:#102943;line-height:1.2}.bar{height:4px;border-radius:2px;background:linear-gradient(90deg,#ff8a3d,#e0409b,#7b4dff,#2f6bff);margin:14px 0 20px}
+.steps{position:relative}.steps:before{content:"";position:absolute;left:21px;top:10px;bottom:10px;width:2px;background:#e3e8f0}
+.step{display:flex;gap:16px;padding:10px 0;position:relative;scroll-margin-top:16px}
+.dot{flex:0 0 44px;height:44px;border-radius:50%;background:linear-gradient(90deg,#ff8a3d,#e0409b,#7b4dff,#2f6bff);color:#fff;display:grid;place-items:center;font-weight:800;border:4px solid #fff;box-shadow:0 0 0 1px #e3e8f0}
+.body{flex:1;min-width:0;border:1px solid #e6ebf2;border-radius:12px;padding:12px 16px}
+.st{font-size:.75em;text-transform:uppercase;letter-spacing:.1em;color:#7b4dff;font-weight:700}
+.tag{display:inline-block;margin-left:6px;padding:0 8px;border-radius:999px;font-size:.9em;letter-spacing:.06em;vertical-align:1px}
+.tag.core{background:#7b4dff;color:#fff}.tag.choice{border:1px solid #c9b8ff;color:#7b4dff;background:#fff}
+.body h3{margin:.1em 0}.body p{margin:.3em 0;color:#5a6878}
+.needs{background:#f6f3ff;border-radius:8px;padding:8px 12px;font-size:.92em;margin:8px 0}.needs ul{margin:4px 0 0;padding-left:18px}.needs li{margin:3px 0}
+.needs summary{cursor:pointer;color:#5a6878;font-size:.95em}a.dl{font-weight:600}
+.acts{display:flex;align-items:center;gap:8px;margin-top:10px}
+a.go{display:inline-block;font-weight:600;font-size:.9em;border-radius:8px;padding:6px 14px;color:#fff;background:linear-gradient(90deg,#ff8a3d,#e0409b,#7b4dff,#2f6bff);text-decoration:none}
+.subs{display:inline-flex;gap:6px;margin-left:auto}
+a.sub{font-size:.8em;border:1px solid #dde3ec;border-radius:6px;padding:1px 9px;color:#6b7a8c;text-decoration:none;background:#fff}
+.extras{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:22px}.extras>div{background:#f4f8fd;border-radius:10px;padding:12px 14px}
+.extras ul{list-style:none;padding:0;margin:6px 0 0}.extras li{display:flex;align-items:center;gap:8px;margin:4px 0}
+.foot{text-align:center;color:#7d869a;font-size:.85em;margin-top:22px}
+.people{margin:0 0 12px 60px}.people code{background:#f1f4f8;padding:1px 5px;border-radius:4px;font-size:.9em}
+@media(max-width:650px){.people{margin-left:0}}
+@media(max-width:650px){main{margin:-30px 10px 20px;padding:22px 18px}.extras{grid-template-columns:1fr}}
+</style></head><body>
+<div class="strip plain"></div>
+<main>
+<div class="kicker">ENAS 2170 · Yale · 30 November 2026</div>
+<h1>Your Lab Journey</h1>
+<p class="muted">Do <strong>Lab 00</strong> before class — about fifteen minutes. In class, your table picks <strong>one</strong> of the three projects and builds it together. <strong>Open guide</strong> opens the lab as a web page.</p>
+<div class="bar"></div>
+<div class="steps">
+<div class="step" id="lab-00"><div class="dot">00</div><div class="body"><div class="st">Lab 00</div><h3>Before Class</h3><p>Do this before class: install the Claude desktop app and sign in to your lab account.</p><div class="acts"><a class="go" href="Lab_00_Guide_Setup.html">Open guide</a><span class="subs"><a class="sub" href="Lab_00_Guide_Setup.pdf">PDF</a><a class="sub" href="https://github.com/gcodekhanna1/2026-11-enas-agentic-lab/blob/main/Lab_00_Guide_Setup.md" title="Markdown source (same content), shown on GitHub">.md</a></span></div></div></div>
+<div class="step" id="lab-01"><div class="dot">01</div><div class="body"><div class="st">Lab 01 <span class="tag choice">Pick one</span></div><h3>Volunteer Matching Portal</h3><p>Connect local organizations that need help with students who have time and skills to give.</p><div class="acts"><a class="go" href="Lab_01_Guide_Volunteer_Matching.html">Open guide</a><span class="subs"><a class="sub" href="Lab_01_Guide_Volunteer_Matching.pdf">PDF</a><a class="sub" href="https://github.com/gcodekhanna1/2026-11-enas-agentic-lab/blob/main/Lab_01_Guide_Volunteer_Matching.md" title="Markdown source (same content), shown on GitHub">.md</a></span></div></div></div>
+<div class="step" id="lab-02"><div class="dot">02</div><div class="body"><div class="st">Lab 02 <span class="tag choice">Pick one</span></div><h3>Internship Discovery and Planner</h3><p>Track what&#x27;s open, what you&#x27;ve applied to, and what&#x27;s due next — in one place instead of six.</p><div class="acts"><a class="go" href="Lab_02_Guide_Internship_Planner.html">Open guide</a><span class="subs"><a class="sub" href="Lab_02_Guide_Internship_Planner.pdf">PDF</a><a class="sub" href="https://github.com/gcodekhanna1/2026-11-enas-agentic-lab/blob/main/Lab_02_Guide_Internship_Planner.md" title="Markdown source (same content), shown on GitHub">.md</a></span></div></div></div>
+<div class="step" id="lab-03"><div class="dot">03</div><div class="body"><div class="st">Lab 03 <span class="tag choice">Pick one</span></div><h3>Portfolio and Budget Tracker</h3><p>Follow a basket of companies, or a budget, and understand what moved and why.</p><div class="acts"><a class="go" href="Lab_03_Guide_Portfolio_Tracker.html">Open guide</a><span class="subs"><a class="sub" href="Lab_03_Guide_Portfolio_Tracker.pdf">PDF</a><a class="sub" href="https://github.com/gcodekhanna1/2026-11-enas-agentic-lab/blob/main/Lab_03_Guide_Portfolio_Tracker.md" title="Markdown source (same content), shown on GitHub">.md</a></span></div></div></div>
+</div>
+<div class="extras"><div><b>Reference</b><ul><li class="muted">Nothing yet.</li></ul></div>
+<div><b>Everything at Once</b><p class="muted" style="margin:4px 0 8px">All guides, PDFs, images and sample files in one download.</p><a class="dl" href="https://github.com/gcodekhanna1/2026-11-enas-agentic-lab/archive/refs/heads/main.zip">Download everything (.zip)</a></div></div>
+<p class="foot">PDF and .md versions have the same content as the web pages. · <a href="https://github.com/gcodekhanna1/2026-11-enas-agentic-lab">View on GitHub</a></p>
+</main></body></html>

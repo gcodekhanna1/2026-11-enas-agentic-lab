@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Lab 01 — Volunteer Matching Portal</title><style>
+*{box-sizing:border-box}body{margin:0;background:#f3f5f8;color:#172335;font:17px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:1000px;margin:36px auto;padding:48px 64px;background:white;border-radius:12px;box-shadow:0 4px 24px #1723350c}h1{font-size:2.3rem;line-height:1.2;margin-top:0;color:#102943}h2{font-size:1.55rem;line-height:1.3;border-bottom:1px solid #dce4ec;padding-bottom:10px}h3{font-size:1.15rem;margin-top:28px}li{margin:8px 0}a{color:#075da8}code{background:#edf1f5;padding:2px 5px;border-radius:4px;font-size:.9em;overflow-wrap:anywhere}pre{background:#edf1f5;padding:16px;border-radius:7px}pre code{padding:0}img{max-width:100%;height:auto;border:1px solid #dce4ec;border-radius:6px}p[align="center"]{margin:12px 0} @media(max-width:650px){main{margin:0;padding:28px 22px;border-radius:0}img{width:100%}h1{font-size:1.9rem}}@media print{body{background:white;font-size:11pt}main{margin:0;padding:0;max-width:none;box-shadow:none}h1,h2,h3{break-after:avoid}img,pre{break-inside:avoid}a{color:inherit}}
+
+table{border-collapse:collapse;width:100%;margin:20px 0}th,td{border:1px solid #dce4ec;padding:10px;text-align:left}th{background:#edf1f5}pre{white-space:pre-wrap;overflow-wrap:anywhere}
+@page { size: letter; margin: 0.65in; }
+@media print {
+  body { font-size: 10.5pt; line-height: 1.5; }
+  h1 { font-size: 25pt; }
+  h2 { font-size: 17pt; }
+  h3 { font-size: 12pt; }
+  p, li { orphans: 3; widows: 3; }
+  img { max-height: 7in; object-fit: contain; }
+  p[align="center"] { break-inside: avoid; }
+  pre { break-inside: auto; }
+  tr { break-inside: avoid; }
+  thead { display: table-header-group; }
+}
+
+blockquote{position:relative;margin:22px 0;padding:34px 22px 14px;background:#f4f8fd;border:1px solid #c9d8ee;border-left:5px solid #0b4f8a;border-radius:8px;font-family:"SF Mono",Menlo,Consolas,"Liberation Mono",monospace;font-size:.86em;line-height:1.6;color:#10233f}blockquote::before{content:"PROMPT";position:absolute;top:10px;left:22px;font:700 .72rem/1 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;letter-spacing:.12em;color:#0b4f8a}blockquote p{margin:10px 0}blockquote ul,blockquote ol{padding-left:22px}blockquote li{margin:4px 0}blockquote code{background:#e3ecf7}blockquote pre{background:#e3ecf7}@media print{blockquote{break-inside:auto;font-size:9pt}}
+
+p.warning{color:#b42318;background:#fef3f2;border:1px solid #fecdca;border-left:5px solid #d92d20;border-radius:8px;padding:12px 16px;font-weight:600}@media print{p.warning{break-inside:avoid}}
+
+p.labpc{background:#eff6ff;border:1px solid #bfdbfe;border-left:5px solid #2563eb;border-radius:8px;padding:12px 16px;color:#1e3a8a;margin:12px 0}p.labpc b.lead{display:block;font-size:1.05em;margin-bottom:2px}
+p.info{background:#f9fafb;border:1px solid #e5e7eb;border-left:5px solid #9ca3af;border-radius:8px;padding:10px 16px;margin:12px 0}
+table.path{border-collapse:collapse;width:100%}table.path th,table.path td{border:1px solid #e5e7eb;padding:7px 10px;text-align:left;vertical-align:top}table.path th{background:#f9fafb}table.path td.skip{background:#eff6ff;color:#1e3a8a}
+@media print{p.labpc,p.info,table.path{break-inside:avoid}p.labpc,p.info,table.path td.skip{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+
+.copybtn{position:absolute;top:8px;right:10px;display:inline-flex;align-items:center;gap:5px;font:600 .72rem/1 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;letter-spacing:.04em;color:#0b4f8a;background:#fff;border:1px solid #c9d8ee;border-radius:6px;padding:5px 9px;cursor:pointer}.copybtn:hover{background:#e3ecf7}.copybtn svg{width:14px;height:14px}.copybtn.done{color:#067647;border-color:#abefc6}@media print{.copybtn{display:none!important}}
+
+.topnav{position:sticky;top:0;z-index:10;background:#0b0c12;border-bottom:3px solid transparent;border-image:linear-gradient(90deg,#ff8a3d,#e0409b,#7b4dff,#2f6bff) 1}.topnav div{max-width:1000px;margin:0 auto;padding:10px 16px;display:flex;justify-content:space-between;align-items:center;gap:12px;font:14px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}.topnav a{display:inline-block;padding:2px;border-radius:999px;background:linear-gradient(90deg,#ff8a3d,#e0409b,#7b4dff,#2f6bff);text-decoration:none;flex:none}.topnav a span{display:block;background:#0b0c12;border-radius:999px;padding:4px 14px;font-weight:600}.topnav a b{background:linear-gradient(90deg,#ffb07a,#f06ab8,#a98bff,#7fa6ff);-webkit-background-clip:text;background-clip:text;color:transparent}.topnav a:hover span{background:transparent}.topnav a:hover b{color:#fff;background:none;-webkit-background-clip:border-box}.topnav small{color:#c9b8ff;letter-spacing:.1em;text-transform:uppercase;font-size:11px;text-align:right}.bottomnav{margin-top:36px;padding-top:18px;border-top:1px solid #dce4ec}.bottomnav a{display:inline-block;font-weight:600;color:#fff;background:linear-gradient(90deg,#ff8a3d,#e0409b,#7b4dff,#2f6bff);padding:7px 16px;border-radius:8px;text-decoration:none}@media(max-width:650px){.topnav small{display:none}}@media print{.topnav,.bottomnav{display:none!important}}
+</style></head><body><nav class="topnav"><div><a href="https://gcodekhanna1.github.io/2026-10-ai-skills-lab/"><span><b>← Main Menu</b></span></a><small>WebexOne 2026 · Building AI Projects</small></div></nav><main><h1>Lab 01 — Volunteer Matching Portal</h1>
+<p><em>Connect local organizations that need help with students who have time and skills to give.</em></p>
+<h2>Introduction</h2>
+<p>This is the one project of the three that you build <strong>for other people</strong>. Nobody at your table is the user. That makes it harder, and more interesting: you have to think about two groups at once — the organizations posting needs, and the students answering them.</p>
+<br>
+
+<h2>Before You Start</h2>
+<ul>
+<li><p><strong>One laptop, five people.</strong> Decide who drives. The driver types; everyone else plans, watches the output and proposes what to try next. Swap if you like.</p>
+</li>
+<li><p><strong>Your table's job is not to finish.</strong> It's to get something real running and understand how you got there. Nobody expects a finished product in an hour.</p>
+</li>
+<li><p><strong>Laptops stay closed</strong> until Step 02. The first thirty minutes are paper and pens. That isn't a warm-up exercise — it's the part that determines whether the build works.</p>
+</li>
+</ul>
+<br>
+
+<h2>What You'll Build</h2>
+<p>A working web page where:</p>
+<ul>
+<li>An organization can post something it needs help with.</li>
+<li>A student can find the needs that match their time and skills.</li>
+<li>The two get matched — and <strong>something happens</strong> as a result.</li>
+</ul>
+<p>That last one is the interesting part, and Step 01 is where you decide what it means.</p>
+<br>
+
+<h2>Step 01: Brainstorm Together — Laptops Closed</h2>
+<p><em>About 30 minutes. Paper and pens on the table.</em></p>
+<p>Write your answers down. At the end of this step you'll hand what you wrote to Claude, so write it for a reader, not as private shorthand.</p>
+<h3>Who Is This For?</h3>
+<ul>
+<li>Name the two sides. Who posts a need? Who answers it?</li>
+<li>Pick one real example of each. A specific organization, a specific student. Invent them, but make them specific.</li>
+<li>What does each one want in the ten seconds they look at your page?</li>
+</ul>
+<h3>What Does the Screen Show?</h3>
+<ul>
+<li>Sketch it. One page, boxes and labels, no artistry required.</li>
+<li>What is the <strong>first</strong> thing a visitor sees? What can they do without typing anything?</li>
+<li>What do you deliberately leave out? Name two things you're not building.</li>
+</ul>
+<h3>Where Does the Data Come From?</h3>
+<ul>
+<li>You will be given a set of volunteer opportunities to work with.</li>
+</ul>
+<p>[PLACEHOLDER - how students connect to the workshop MCP server, once the server exists]</p>
+<ul>
+<li>What fields does each opportunity have? Which ones does your page actually use?</li>
+</ul>
+<h3>What Does It Do, Not Just Show?</h3>
+<p><em>This is the agentic question, and the one worth most of your time.</em></p>
+<ul>
+<li>A page that <strong>displays</strong> information is a brochure. What does yours <strong>do</strong>?</li>
+<li>Some directions worth arguing about:<ul>
+<li>It notices a new need that matches a student's skills and tells them.</li>
+<li>It drafts the introduction email between the two sides.</li>
+<li>It runs each morning and sends a short digest of what changed.</li>
+<li>It flags opportunities that are about to expire.</li>
+</ul>
+</li>
+<li>Pick <strong>one</strong>. Write down what triggers it, and what the result is.</li>
+</ul>
+<br>
+
+<h2>Step 02: Turn Your Notes into a Prompt</h2>
+<p><em>Now the laptop opens.</em></p>
+<p>You have a page of decisions. Claude needs them as instructions.</p>
+<ul>
+<li><p><strong>Open a Cowork session</strong> connected to your project folder from Lab 00.</p>
+</li>
+<li><p><strong>Two ways to get your plan in</strong>, and the second is usually better:</p>
+<ul>
+<li>Type it out.</li>
+<li><strong>Photograph your notes</strong> with a phone and attach the picture. Claude reads handwriting and sketches. Your sketch of the screen is often clearer than a paragraph describing it.</li>
+</ul>
+</li>
+<li><p>Write the prompt in your own words. It should say who it's for, what the screen shows, where the data comes from, and what it does. Don't worry about sounding technical.</p>
+</li>
+</ul>
+<br>
+
+<h2>Step 03: Let Claude Interview You</h2>
+<p><em>Optional, and recommended. Five minutes that saves twenty.</em></p>
+<p>Before asking Claude to build anything, ask it to ask <strong>you</strong> questions:</p>
+<blockquote>
+<p>Before you build anything, interview me. Ask me five multiple-choice questions about what I want, one at a time. Then write a short plan as <code>MVP Plan.md</code> and show me a simple mockup with sample data. Wait for me to approve it before you write any other code.</p>
+</blockquote>
+<p>This catches the thing your table forgot. It is also, in miniature, the whole point of the lecture: you are directing an agent, not placing an order.</p>
+<br>
+
+<h2>Step 04: Build It</h2>
+<ul>
+<li><p>Send your prompt.</p>
+</li>
+<li><p>Claude will ask permission before it does things. <strong>Click Allow</strong> — or <strong>Allow for this task</strong> to reduce the clicking.</p>
+</li>
+</ul>
+<br>
+
+<h2>Step 05: While You Wait</h2>
+<p>Builds take <strong>ten minutes or more</strong>. Plan for it.</p>
+<ul>
+<li><p><strong>Stay near the laptop.</strong> Claude pauses to ask questions and waits until someone answers. Nothing moves while it waits.</p>
+</li>
+<li><p><strong>Non-drivers, you have work to do.</strong> Discuss:</p>
+<ul>
+<li><em>Why is Markdown a useful language for configuring agents?</em></li>
+<li>What would you have to change to make this work for a different city?</li>
+<li>What could go wrong if this were real and had real users?</li>
+</ul>
+</li>
+<li><p><strong>Compare with your neighbors.</strong> The table next to you made different choices.</p>
+</li>
+</ul>
+<br>
+
+<h2>Step 06: Run It and Try It</h2>
+<ul>
+<li><p>Claude will tell you how to start your app and give you a web address to open.</p>
+</li>
+<li><p>Try it as each of your two users. Does the organization's side make sense? The student's?</p>
+</li>
+<li><p>Find one thing that's wrong or missing. That's your next prompt.</p>
+</li>
+</ul>
+<br>
+
+<h2>Step 07: Add Your Own Twist</h2>
+<p>Whatever time is left is yours. Change something that makes it yours rather than ours.</p>
+<br>
+
+<h2>If You Get Stuck</h2>
+<ul>
+<li><p><strong>Strange file errors, or the build keeps failing:</strong> check your project folder isn't in iCloud, Dropbox, OneDrive, Box or Google Drive. Move it to your home folder and try again.</p>
+</li>
+<li><p><strong>Claude seems frozen:</strong> look for a permission prompt waiting for a click.</p>
+</li>
+<li><p><strong>The app won't start:</strong> paste the error message back to Claude and ask it to fix it. This is normal and expected.</p>
+</li>
+<li><p><strong>You're out of ideas:</strong> see the Answer Sheet below.</p>
+</li>
+</ul>
+<br>
+
+<h2>Key Takeaways</h2>
+<ul>
+<li>The thirty minutes on paper did more for your build than any single prompt.</li>
+<li>You directed an agent. It planned, used tools and acted — you decided what mattered.</li>
+<li>The gap between &quot;displays information&quot; and &quot;does something&quot; is the gap between an app and an agent.</li>
+</ul>
+<br>
+
+<h2>Answer Sheet</h2>
+<p><em>Use these if your table is stuck. Reading them first spoils the exercise.</em></p>
+<p>[PLACEHOLDER - suggested prompts: a starting prompt, a prompt for adding the agentic action, and two recovery prompts for common failures]</p>
+<div class="bottomnav"><a href="https://gcodekhanna1.github.io/2026-10-ai-skills-lab/">← Main Menu</a></div></main><script>
+(function(){
+  var ICON='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>';
+  function toText(el){
+    var out=[];
+    Array.prototype.forEach.call(el.children,function(n){
+      if(n.classList.contains('copybtn'))return;
+      if(n.tagName==='UL'||n.tagName==='OL'){
+        Array.prototype.forEach.call(n.children,function(li,i){
+          out.push((n.tagName==='OL'?(i+1)+'. ':'- ')+li.innerText.trim());});
+      }else if(n.tagName==='PRE'){out.push(n.innerText.replace(/\n$/,''));}
+      else{out.push(n.innerText.trim());}
+      out.push('');
+    });
+    return out.join('\n').trim()+'\n';
+  }
+  function fallback(t){var a=document.createElement('textarea');a.value=t;a.style.position='fixed';a.style.opacity='0';
+    document.body.appendChild(a);a.select();try{document.execCommand('copy');}finally{document.body.removeChild(a);}}
+  document.querySelectorAll('main blockquote').forEach(function(bq){
+    var b=document.createElement('button');b.type='button';b.className='copybtn';b.title='Copy this prompt';
+    b.innerHTML=ICON+'<span>Copy</span>';
+    b.addEventListener('click',function(){
+      var t=toText(bq),label=b.querySelector('span');
+      var done=function(){b.classList.add('done');label.textContent='Copied!';
+        setTimeout(function(){b.classList.remove('done');label.textContent='Copy';},1800);};
+      if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(t).then(done,function(){fallback(t);done();});}
+      else{fallback(t);done();}
+    });
+    bq.appendChild(b);
+  });
+})();
+</script></body></html>
