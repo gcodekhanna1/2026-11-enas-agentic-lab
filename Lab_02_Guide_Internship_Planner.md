@@ -26,8 +26,6 @@ You're going after summer internships, and keeping track of it all gets overwhel
 
 You want one place that holds all of it.
 
-<p class="warning">⚠️ The five of you are after different things. Whatever you build has to work for all of you — not just for whoever is typing.</p>
-
 <br>
 
 ## How Your Table Works
@@ -40,7 +38,7 @@ You want one place that holds all of it.
 
 <br>
 
-## Discovery: 30 Minutes
+## Step 01: Discovery — 30 Minutes
 
 Work as a team to discuss the questions below. Feel free to add some of your own — these are just starters.
 
@@ -48,21 +46,21 @@ Remember that we are building and iterating. As a group, use your judgment for w
 
 Write your answers down, or type them; you'll hand them to Claude at the end.
 
-### 1. Where Do You Normally Find Out About Internships?
+### Where Do You Normally Find Out About Internships?
 
 Public job sites, the Yale career site, a professor, a friend who already works there?
 
-### 2. What Frustrates You Most About Applying?
+### What Frustrates You Most About Applying?
 
 Be specific. The last time it went badly, what actually went wrong?
 
-### 3. What Do You Wish You Could Remember About Each One — Before You Apply, and After?
+### What Do You Wish You Could Remember About Each One — Before You Apply, and After?
 
 Deadlines, links, who you emailed, where you stand, what they said.
 
-### 4. Are You Updating Your Resume / Cover Letter for Each Application? How?
+### Are You Updating Your Resume / Cover Letter for Each Application? How?
 
-### 5. What Do You Find Out Too Late?
+### What Do You Find Out Too Late?
 
 What are the things you want to be notified about?
 
@@ -74,13 +72,13 @@ You didn't design software. You described your own situation — and the thing y
 
 <br>
 
-## Step 01: Hand It to Claude
+## Step 02: Hand It to Claude
 
 * **Open a Cowork session** connected to the project folder you made in Lab 00.
 
 * Send Claude your answers along with this:
 
-> Here are our answers to five questions about tracking internship applications.
+> Here are our notes on how we track internship applications, and what goes wrong.
 >
 > [paste your answers, or attach a photo of this page]
 >
@@ -96,11 +94,9 @@ You didn't design software. You described your own situation — and the thing y
 
 <p class="info"><b>Hint:</b> Claude handles images and photos as input very well. Photograph this whole page with a phone and attach it — handwriting, arrows, crossings-out and all. You don't need to type any of it out.</p>
 
-<p class="info"><b>Unfamiliar word?</b> Streamlit, uv, mockup, MCP — they're all in the <a href="Lab_00_Glossary.html">Glossary</a>. You don't need to understand them to use them.</p>
-
 <br>
 
-## Step 02: Answer Its Questions, Then Judge the Mockup
+## Step 03: Answer Its Questions, Then Judge the Mockup
 
 * Claude will ask you a handful of questions. **Answer them as a table** — this is the part where the people not typing matter most.
 
@@ -112,7 +108,7 @@ You didn't design software. You described your own situation — and the thing y
 
 <br>
 
-## Step 03: Build It
+## Step 04: Build It
 
 * When the mockup is right, tell Claude to go ahead.
 
@@ -120,7 +116,7 @@ You didn't design software. You described your own situation — and the thing y
 
 <br>
 
-## Step 04: While You Wait
+## Step 05: While You Wait
 
 Builds take **ten minutes or more**. Plan for it.
 
@@ -135,7 +131,7 @@ Builds take **ten minutes or more**. Plan for it.
 
 <br>
 
-## Step 05: Run It, Then Test It Properly
+## Step 06: Run It, Then Test It Properly
 
 * Claude will tell you how to start your app and give you a web address to open.
 
@@ -145,9 +141,9 @@ Builds take **ten minutes or more**. Plan for it.
 
 <br>
 
-## Step 06: Make It Yours
+## Step 07: Make It Yours
 
-Whatever time is left belongs to you. Fix the thing that annoyed you most in Step 05, or add the one feature somebody keeps asking for.
+Whatever time is left belongs to you. Fix the thing that annoyed you most in Step 06, or add the one feature somebody keeps asking for.
 
 <br>
 
