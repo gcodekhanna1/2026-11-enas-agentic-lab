@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ENAS 2170 — Lab 02 Design Worksheet</title>
+<style>
+@page{size:Letter;margin:0.45in}
+*{box-sizing:border-box}
+body{margin:0;background:#8e9099;font:13.5px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#172335;padding:24px 16px}
+.sheet{width:8.5in;max-width:100%;background:#fff;margin:0 auto;padding:0.5in 0.6in;box-shadow:0 6px 30px #0003}
+.rule{height:5px;background:linear-gradient(90deg,#00356b,#286dc0);border-radius:3px}
+.head{display:flex;justify-content:space-between;align-items:flex-end;margin:12px 0 3px;gap:14px}
+h1{font-family:Georgia,"Times New Roman",serif;font-weight:600;color:#00356b;font-size:19px;margin:0;line-height:1.2}
+.meta{font-size:10px;color:#5a6878;text-align:right;white-space:nowrap;line-height:1.4}
+.names{display:flex;gap:10px;margin:9px 0 11px;font-size:9.5px;color:#7d869a}
+.names div{flex:1;border-bottom:1px solid #b9c4d2;padding-bottom:2px}
+.goal{background:#f2f6fb;border:1px solid #cfdcec;border-left:5px solid #00356b;border-radius:7px;padding:10px 13px}
+.goal b{color:#00356b;display:block;font-size:9.5px;letter-spacing:.09em;text-transform:uppercase;margin-bottom:3px}
+.goal p{margin:0;font-size:12.5px;line-height:1.5}
+.goal p.constraint{margin-top:7px;padding-top:7px;border-top:1px solid #cfdcec;font-weight:600;color:#00356b}
+.clock{display:flex;align-items:center;gap:10px;margin:12px 0 2px;padding:8px 13px;background:#00356b;color:#fff;border-radius:7px}
+.clock .big{font-family:Georgia,serif;font-weight:600;font-size:15px;white-space:nowrap}
+.clock .sep{width:1px;height:26px;background:#4d7bab;flex:none}
+.clock .rest{font-size:10.5px;line-height:1.4;opacity:.92}
+.note{font-size:10px;color:#7d869a;font-style:italic;margin:8px 0 0}
+.q{margin-top:12px;break-inside:avoid}
+.qh{display:flex;align-items:baseline;gap:7px;margin-bottom:3px}
+.num{background:#00356b;color:#fff;width:19px;height:19px;border-radius:50%;display:grid;place-items:center;font-weight:700;font-size:10px;flex:none}
+.qt{font-family:Georgia,serif;font-weight:600;color:#00356b;font-size:13.5px;line-height:1.3}
+.hint{font-size:10px;color:#7d869a;margin:0 0 3px 26px;font-style:italic}
+.lines{margin-left:26px}
+.lines div{border-bottom:1px solid #c8d2de;height:19px}
+.turn{margin:14px 0 0;background:#00356b;color:#fff;border-radius:7px;padding:9px 14px;font-family:Georgia,serif;font-size:13.5px;font-weight:600;break-inside:avoid}
+.foot{margin-top:11px;border-top:2px solid #00356b;padding-top:8px;break-inside:avoid}
+.foot b{color:#00356b;font-size:11px}
+.skel{background:#fbfcfe;border:1px solid #dce4ec;border-radius:7px;padding:8px 11px;margin-top:5px;font-family:ui-monospace,Menlo,monospace;font-size:10px;line-height:1.7;color:#10233f}
+.tip{font-size:10px;color:#5a6878;margin-top:6px}
+.tip b{color:#00356b}
+.after{margin-top:9px;background:#fff8e6;border:1px solid #f0dfae;border-left:5px solid #c08a1e;border-radius:7px;padding:8px 12px;font-size:10.5px;color:#4a3a12;break-inside:avoid}
+.after b{color:#8a6410}
+@media print{
+  body{background:#fff;padding:0}
+  .sheet{box-shadow:none;width:auto;padding:0;margin:0}
+}
+</style></head><body>
+
+<div class="sheet">
+  <div class="rule"></div>
+  <div class="head">
+    <h1>Lab 02 — Internship, Discovery and Planner</h1>
+    <div class="meta">ENAS 2170 · Yale<br>30 November 2026</div>
+  </div>
+
+  <div class="names">
+    <div>Table #</div><div>Driving the laptop</div><div>Writing this down</div>
+  </div>
+
+  <div class="goal">
+    <b>The goal</b>
+    <p>You're going after summer internships, and keeping track of it all gets overwhelming fast — which ones you care about, whether you've applied, who you've spoken to, what you owe them, and what you'd have to change in your resume. You want one place that holds all of it.</p>
+    <p class="constraint">The five of you are after different things. Whatever you build has to work for all of you — not just for whoever is typing.</p>
+  </div>
+
+  <div class="clock">
+    <div class="big">Discovery: 30 minutes</div>
+    <div class="sep"></div>
+    <div class="rest">All five questions, then hand it to Claude. The rest of the session is yours to build and iterate — so don't polish this page, finish it.</div>
+  </div>
+
+  <p class="note">Answer these about <em>your own</em> experience. Don't design anything yet — just describe how it actually goes. Everyone at the table answers; differences are useful.</p>
+
+  <div class="q">
+    <div class="qh"><span class="num">1</span><span class="qt">Where do you normally find out about internships?</span></div>
+    <p class="hint">Public job sites, the Yale career site, a professor, a friend who already works there? Go around the table.</p>
+    <div class="lines"><div></div><div></div></div>
+  </div>
+
+  <div class="q">
+    <div class="qh"><span class="num">2</span><span class="qt">What frustrates you most about applying?</span></div>
+    <p class="hint">Be specific. The last time it went badly, what actually went wrong?</p>
+    <div class="lines"><div></div><div></div><div></div></div>
+  </div>
+
+  <div class="q">
+    <div class="qh"><span class="num">3</span><span class="qt">What do you wish you could remember about each one — before you apply, and after?</span></div>
+    <p class="hint">Deadlines, links, who you emailed, where you stand, what they said.</p>
+    <div class="lines"><div></div><div></div><div></div></div>
+  </div>
+
+  <div class="q">
+    <div class="qh"><span class="num">4</span><span class="qt">How much do you rewrite your resume or cover letter for each application?</span></div>
+    <p class="hint">What does that actually involve, step by step?</p>
+    <div class="lines"><div></div><div></div></div>
+  </div>
+
+  <div class="q">
+    <div class="qh"><span class="num">5</span><span class="qt">What do you find out too late?</span></div>
+    <p class="hint">List those first. Then: so what should this thing tell you, and when should it tell you?</p>
+    <div class="lines"><div></div><div></div><div></div></div>
+  </div>
+
+  <div class="turn">Look back at what you just wrote. That's your portal.</div>
+
+  <div class="foot">
+    <b>Now hand it to Claude — ask for a mockup before anything gets built</b>
+    <div class="skel">
+      Here are our answers to five questions about tracking internship applications.<br>
+      [paste your answers, or attach a photo of this page]<br><br>
+      Build us an initial minimum viable product that we can further customize<br>
+      working with you.<br><br>
+      Build it with:<br>
+      &nbsp;&nbsp;— Streamlit, in Python. Please don't use a different framework.<br>
+      &nbsp;&nbsp;— uv to install whatever it needs.<br>
+      &nbsp;&nbsp;— One start file, so we can run it again later with a single command.<br>
+      &nbsp;&nbsp;— A button that loads sample data, so we can see it working right away.<br><br>
+      Before you build anything: ask us up to five questions about whatever is<br>
+      unclear, then show us a mockup using sample data. Wait for us to approve<br>
+      the mockup before you write the real thing.
+    </div>
+    <p class="tip"><b>Hint:</b> Claude handles images and photos as input very well. Photograph this whole page with a phone and attach it — handwriting, arrows, crossings-out and all. You don't need to type any of it out.</p>
+    <p class="tip"><b>Unfamiliar word?</b> Streamlit, uv, mockup, MCP — they're all in the <b>Glossary</b> on the lab website. You don't need to understand them to use them.</p>
+
+    <div class="after">
+      <b>When it's running:</b> each of you add one real internship you'd actually go for — find the posting, paste the link. Five people, five different fields. That's the test of whether it works for the table, or only for whoever built it.
+    </div>
+  </div>
+</div>
+</body></html>
