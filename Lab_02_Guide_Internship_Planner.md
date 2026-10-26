@@ -7,146 +7,147 @@ STYLE GUIDE FOR THE LAB GUIDES (this comment doesn't appear in the preview)
 - Things to click or press: bold, with the exact wording on screen.
 - Commands: in a code block on their own line, never bold.
 - Files, folders and email addresses: `code` style.
-- Names: Claude desktop app, Cowork, MCP, Lab 00 / Lab 01 / Lab 02 / Lab 03.
+- Names: Claude desktop app, Cowork, MCP, Streamlit, uv, Lab 00 / Lab 01 / Lab 02 / Lab 03.
 - Images: centered <p align="center"> block with a width, one <br> before and after.
 - Placeholders: [PLACEHOLDER - description] on its own line, with an empty line before and after.
 - Punctuation: full sentences end with a period; no double spaces; use an em dash (—), not --.
 - Spacing: one <br> (with empty lines around it) before each section heading, except the first.
-- ENAS NOTE: students write their own prompts. The Answer Sheet is a rescue rope, not the path.
+- ENAS NOTE: one document. The discovery questions and the build steps live together here.
+- ENAS NOTE: students write their own prompt. The Answer Sheet is a rescue rope, not the path.
 -->
 
-# Lab 02 — Internship Discovery and Planner
+# Lab 02 — Internship, Discovery and Planner
 
-*Track what's open, what you've applied to, and what's due next — in one place instead of six.*
+*Thirty minutes describing the problem. The rest of the session building the answer.*
 
-## Introduction
+## The Goal
 
-This is the project where **you are the user**, which cuts both ways. You know exactly what's annoying about tracking internships, so you'll have strong opinions fast. The risk is building for yourself alone rather than for the five people at your table, who do it differently.
+You're going after summer internships, and keeping track of it all gets overwhelming fast — which ones you care about, whether you've applied, who you've spoken to, what you owe them, and what you'd have to change in your resume.
 
-<br>
+You want one place that holds all of it.
 
-## Before You Start
-
-* **One laptop, five people.** Decide who drives. The driver types; everyone else plans, watches the output and proposes what to try next. Swap if you like.
-
-* **Your table's job is not to finish.** It's to get something real running and understand how you got there.
-
-* **Laptops stay closed** until Step 02. The first thirty minutes are paper and pens — and that's the part that determines whether the build works.
+<p class="warning">⚠️ The five of you are after different things. Whatever you build has to work for all of you — not just for whoever is typing.</p>
 
 <br>
 
-## What You'll Build
+## How Your Table Works
 
-A working page that holds the mess in one place:
+* **One laptop.** Decide who drives. The driver types; everyone else thinks, argues, watches the output and proposes what to try next. Swap whenever you like.
 
-* What's open, and when it closes.
-* Where you are with each one.
-* What needs doing next — and **something that acts on that**, rather than waiting for you to look.
+* **Everyone answers the questions.** The differences between you are the most useful thing on this page.
 
-<br>
-
-## Step 01: Brainstorm Together — Laptops Closed
-
-*About 30 minutes. Paper and pens on the table.*
-
-Write your answers down. At the end of this step you'll hand what you wrote to Claude, so write it for a reader.
-
-### Who Is This For?
-
-* Compare how each of you tracks this today. Notes app, spreadsheet, memory, nothing?
-* Where does it actually break down? Be specific about the last time it did.
-* Whose version are you building? A first-year with no applications yet and a senior with twenty need different things. Pick one.
-
-### What Does the Screen Show?
-
-* Sketch it. One page, boxes and labels.
-* What's the **first** thing you see when you open it on a bad Tuesday?
-* A list, a calendar, a board, or something else? Argue about it, then decide.
-* Name two things you're deliberately not building.
-
-### Where Does the Data Come From?
-
-* You will be given a set of internship postings to work with.
-
-[PLACEHOLDER - how students connect to the workshop MCP server, once the server exists]
-
-* What does a posting contain? Which fields matter enough to show?
-* What does the student add themselves — status, notes, a rating?
-
-### What Does It Do, Not Just Show?
-
-*This is the agentic question, and the one worth most of your time.*
-
-* A page that **displays** your applications is a spreadsheet with nicer fonts. What does yours **do**?
-* Some directions worth arguing about:
-    - It tells you what's due this week, without being asked.
-    - It drafts the follow-up email to a recruiter who's gone quiet.
-    - It notices a new posting that fits what you've already applied to.
-    - It produces a calendar file for every deadline so they land in your real calendar.
-* Pick **one**. Write down what triggers it, and what the result is.
+* **Your job is not to finish.** It's to get something real running and understand how you got there. Nobody expects a finished product in an hour.
 
 <br>
 
-## Step 02: Turn Your Notes into a Prompt
+## Discovery: 30 Minutes
 
-*Now the laptop opens.*
+Work as a team to discuss the questions below. Feel free to add some of your own — these are just starters.
 
-* **Open a Cowork session** connected to your project folder from Lab 00.
+Remember that we are building and iterating. As a group, use your judgment for when you have done enough discovery to move on to building.
 
-* **Two ways to get your plan in**, and the second is usually better:
-    - Type it out.
-    - **Photograph your notes** with a phone and attach the picture. Claude reads handwriting and sketches, and your sketch of the screen is usually clearer than a paragraph describing it.
+Write your answers down, or type them; you'll hand them to Claude at the end.
 
-* Write the prompt in your own words: who it's for, what the screen shows, where the data comes from, what it does.
+### 1. Where Do You Normally Find Out About Internships?
 
-<br>
+Public job sites, the Yale career site, a professor, a friend who already works there?
 
-## Step 03: Let Claude Interview You
+### 2. What Frustrates You Most About Applying?
 
-*Optional, and recommended. Five minutes that saves twenty.*
+Be specific. The last time it went badly, what actually went wrong?
 
-> Before you build anything, interview me. Ask me five multiple-choice questions about what I want, one at a time. Then write a short plan as `MVP Plan.md` and show me a simple mockup with sample data. Wait for me to approve it before you write any other code.
+### 3. What Do You Wish You Could Remember About Each One — Before You Apply, and After?
 
-This catches what your table forgot. It is also the lecture in miniature: you are directing an agent, not placing an order.
+Deadlines, links, who you emailed, where you stand, what they said.
 
-<br>
+### 4. Are You Updating Your Resume / Cover Letter for Each Application? How?
 
-## Step 04: Build It
+### 5. What Do You Find Out Too Late?
 
-* Send your prompt.
-
-* Claude will ask permission before it does things. **Click Allow** — or **Allow for this task** to reduce the clicking.
+What are the things you want to be notified about?
 
 <br>
 
-## Step 05: While You Wait
+## Look Back at What You Just Wrote. That's Your Portal.
+
+You didn't design software. You described your own situation — and the thing you need falls out of it. Everything from here is construction.
+
+<br>
+
+## Step 01: Hand It to Claude
+
+* **Open a Cowork session** connected to the project folder you made in Lab 00.
+
+* Send Claude your answers along with this:
+
+> Here are our answers to five questions about tracking internship applications.
+>
+> [paste your answers, or attach a photo of this page]
+>
+> Build us an initial minimum viable product that we can further customize working with you.
+>
+> Build it with:
+> - Streamlit, in Python. Please don't use a different framework.
+> - uv to install whatever it needs.
+> - One start file, so we can run it again later with a single command.
+> - A button that loads sample data, so we can see it working right away.
+>
+> Before you build anything: ask us up to five questions about whatever is unclear, then show us a mockup using sample data. Wait for us to approve the mockup before you write the real thing.
+
+<p class="info"><b>Hint:</b> Claude handles images and photos as input very well. Photograph this whole page with a phone and attach it — handwriting, arrows, crossings-out and all. You don't need to type any of it out.</p>
+
+<p class="info"><b>Unfamiliar word?</b> Streamlit, uv, mockup, MCP — they're all in the <a href="Lab_00_Glossary.html">Glossary</a>. You don't need to understand them to use them.</p>
+
+<br>
+
+## Step 02: Answer Its Questions, Then Judge the Mockup
+
+* Claude will ask you a handful of questions. **Answer them as a table** — this is the part where the people not typing matter most.
+
+* Then it shows you a mockup: a rough version with made-up data, before any real code exists.
+
+* **Look at it properly.** Is this the thing you described? What's missing? What's there that nobody asked for?
+
+* Say what's wrong and ask for another one. **Do not approve a mockup you don't like** — changing it now costs seconds, changing it after the build costs ten minutes.
+
+<br>
+
+## Step 03: Build It
+
+* When the mockup is right, tell Claude to go ahead.
+
+* Claude asks permission before it does things. Click **Allow**, or **Allow for this task** to reduce the clicking.
+
+<br>
+
+## Step 04: While You Wait
 
 Builds take **ten minutes or more**. Plan for it.
 
-* **Stay near the laptop.** Claude pauses to ask questions and waits until someone answers.
+* **Stay near the laptop.** Claude pauses to ask questions and waits until somebody answers. Nothing moves while it waits.
 
-* **Non-drivers, you have work to do.** Discuss:
+* **Everyone else, you have work to do.** Discuss:
     - *Why is Markdown a useful language for configuring agents?*
-    - Which of your five would actually use this next week? Why wouldn't the others?
-    - What could go wrong if this had real deadlines in it and got one wrong?
+    - Which of your five would actually use this next week — and why wouldn't the others?
+    - What could go wrong if this held real deadlines and got one wrong?
 
-* **Compare with your neighbors.**
+* **Compare with your neighbors.** The table next to you made different choices from the same questions.
 
 <br>
 
-## Step 06: Run It and Try It
+## Step 05: Run It, Then Test It Properly
 
 * Claude will tell you how to start your app and give you a web address to open.
 
-* Put in a real application you're tracking, or a plausible invented one. Does it hold up?
+* **Each of you add one real internship you'd actually go for.** Find the posting, paste the link. Five people, five different fields.
 
-* Find one thing that's wrong or missing. That's your next prompt.
+* That's the real test: does it work for the table, or only for whoever built it?
 
 <br>
 
-## Step 07: Add Your Own Twist
+## Step 06: Make It Yours
 
-Whatever time is left is yours.
+Whatever time is left belongs to you. Fix the thing that annoyed you most in Step 05, or add the one feature somebody keeps asking for.
 
 <br>
 
@@ -156,17 +157,21 @@ Whatever time is left is yours.
 
 * **Claude seems frozen:** look for a permission prompt waiting for a click.
 
-* **The app won't start:** paste the error message back to Claude and ask it to fix it. This is normal.
+* **The app won't start:** paste the error message back to Claude and ask it to fix it. This is normal and expected — it is not a sign you did something wrong.
 
-* **You're out of ideas:** see the Answer Sheet below.
+* **You're out of ideas:** see the Answer Sheet at the bottom.
 
 <br>
 
 ## Key Takeaways
 
-* The thirty minutes on paper did more for your build than any single prompt.
-* You directed an agent. It planned, used tools and acted — you decided what mattered.
-* The gap between "displays information" and "does something" is the gap between an app and an agent.
+* **The thirty minutes of talking did more for your build than any single prompt.** You described a problem; the design came out of the description.
+
+* **You reviewed a plan before accepting the work.** That one habit separates people who get good results from people who get impressive-looking ones that break.
+
+* **You directed an agent.** It asked, planned, used tools and built — you decided what mattered.
+
+* **A thing that displays is a page. A thing that acts is an agent.** Question 5 is where yours crossed that line.
 
 <br>
 
@@ -174,4 +179,10 @@ Whatever time is left is yours.
 
 *Use these if your table is stuck. Reading them first spoils the exercise.*
 
-[PLACEHOLDER - suggested prompts: a starting prompt, a prompt for adding the agentic action, and two recovery prompts for common failures]
+[PLACEHOLDER - suggested prompts: a worked starting prompt, a prompt for adding the agentic action, and two recovery prompts for common failures]
+
+<br>
+
+## What's Next
+
+Your app lives in your project folder. Share it with your table, keep building, or start something else entirely — you now know how.
