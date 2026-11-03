@@ -7,7 +7,7 @@ STYLE GUIDE FOR THE LAB GUIDES (this comment doesn't appear in the preview)
 - Things to click or press: bold, with the exact wording on screen.
 - Commands: in a code block on their own line, never bold.
 - Files, folders and email addresses: `code` style.
-- Names: Claude desktop app, Cowork, MCP, Lab 00 / Lab 01 / Lab 02 / Lab 03.
+- Names: Claude desktop app, Cowork, MCP, Lab 00 / Lab 01 / Lab 02.
 - Images: centered <p align="center"> block with a width, one <br> before and after.
 - Placeholders: [PLACEHOLDER - description] on its own line, with an empty line before and after.
 - Punctuation: full sentences end with a period; no double spaces; use an em dash (—), not --.
@@ -16,13 +16,13 @@ STYLE GUIDE FOR THE LAB GUIDES (this comment doesn't appear in the preview)
 - ENAS NOTE: tracking and explaining only. No buy/sell advice, no real brokerage connection.
 -->
 
-# Lab 03 — Portfolio and Budget Tracker
+# Lab 02 — Portfolio and Budget Tracker
 
 *Follow a basket of companies, or a budget, and understand what moved and why.*
 
 ## Introduction
 
-This project has the richest data of the three, which makes it the most tempting to overbuild. The table that tries to show everything ends up showing nothing. The table that picks one question and answers it well ends up with something worth demoing.
+This project has rich data, which makes it tempting to overbuild. The table that tries to show everything ends up showing nothing. The table that picks one question and answers it well ends up with something worth demoing.
 
 <p class="warning">⚠️ This is a <b>tracking and explaining</b> tool, not an advice tool. It doesn't tell anyone what to buy or sell, and it never connects to a real brokerage account or real money. The data you'll use is simulated.</p>
 
@@ -30,7 +30,7 @@ This project has the richest data of the three, which makes it the most tempting
 
 ## Before You Start
 
-* **One laptop, five people.** Decide who drives. The driver types; everyone else plans, watches the output and proposes what to try next. Swap if you like.
+* **One laptop: the table leader's.** The table leader types; everyone else plans, watches the output and proposes what to try next.
 
 * **Your table's job is not to finish.** It's to get something real running and understand how you got there.
 
@@ -126,7 +126,7 @@ Builds take **ten minutes or more**. Plan for it.
 
 * **Stay near the laptop.** Claude pauses to ask questions and waits until someone answers.
 
-* **Non-drivers, you have work to do.** Discuss:
+* **Everyone else, you have work to do.** Discuss:
     - *Why is Markdown a useful language for configuring agents?*
     - Your app will explain *why* something moved. How would you know if that explanation were wrong?
     - Where's the line between a tool that explains and a tool that advises — and why does it matter here?

@@ -7,7 +7,7 @@ STYLE GUIDE FOR THE LAB GUIDES (this comment doesn't appear in the preview)
 - Things to click or press: bold, with the exact wording on screen.
 - Commands: in a code block on their own line, never bold.
 - Files, folders and email addresses: `code` style.
-- Names: Claude desktop app, Cowork, MCP, Streamlit, uv, Lab 00 / Lab 01 / Lab 02 / Lab 03.
+- Names: Claude desktop app, Cowork, MCP, Streamlit, uv, Lab 00 / Lab 01 / Lab 02.
 - Images: centered <p align="center"> block with a width, one <br> before and after.
 - Placeholders: [PLACEHOLDER - description] on its own line, with an empty line before and after.
 - Punctuation: full sentences end with a period; no double spaces; use an em dash (—), not --.
@@ -16,7 +16,7 @@ STYLE GUIDE FOR THE LAB GUIDES (this comment doesn't appear in the preview)
 - ENAS NOTE: students write their own prompt. The Answer Sheet is a rescue rope, not the path.
 -->
 
-# Lab 02 — Internship, Discovery and Planner
+# Lab 01 — Internship, Discovery and Planner
 
 *Thirty minutes describing the problem. The rest of the session building the answer.*
 
@@ -30,7 +30,7 @@ You want one place that holds all of it.
 
 ## How Your Table Works
 
-* **One laptop.** Decide who drives. The driver types; everyone else thinks, argues, watches the output and proposes what to try next. Swap whenever you like.
+* **One laptop: the table leader's.** The table leader types; everyone else thinks, argues, watches the output and proposes what to try next.
 
 * **Everyone answers the questions.** The differences between you are the most useful thing on this page.
 

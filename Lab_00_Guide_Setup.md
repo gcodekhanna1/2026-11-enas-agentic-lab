@@ -7,38 +7,36 @@ STYLE GUIDE FOR THE LAB GUIDES (this comment doesn't appear in the preview)
 - Things to click or press: bold, with the exact wording on screen.
 - Commands: in a code block on their own line, never bold.
 - Files, folders and email addresses: `code` style.
-- Names: Claude desktop app, Cowork, MCP, Streamlit, uv, Lab 00 / Lab 01 / Lab 02 / Lab 03.
+- Names: Claude desktop app, Cowork, MCP, Streamlit, uv, Lab 00 / Lab 01 / Lab 02.
 - Images: centered <p align="center"> block with a width, one <br> before and after.
 - Placeholders: [PLACEHOLDER - description] on its own line, with an empty line before and after.
 - Punctuation: full sentences end with a period; no double spaces; use an em dash (—), not --.
 - Spacing: one <br> (with empty lines around it) before each section heading, except the first.
-- ENAS NOTE: Mac only. Tell us before class if you're on Windows and we'll sort it out.
+- ENAS NOTE: written for the table leader, one per table, on a Mac. Nobody else installs anything.
 - ENAS NOTE: uv is installed here, not during class, so nothing downloads while the clock is running.
 -->
 
 # Lab 00 — Before Class
 
-*About twenty minutes at home. Do this and you walk in ready to build.*
+*For table leaders. About twenty minutes at home, so your table walks in ready to build.*
 
 ## Introduction
 
 Our class together is two hours, and nearly all of it is for thinking and building. None of it should be spent installing software or waiting for downloads.
 
-So everything in this guide happens **before** you arrive. Five steps, about twenty minutes, and most of that is waiting for things to download.
+Each table builds on one laptop: the table leader's. So if your table has chosen you as its leader, everything in this guide is for you to do **before** you arrive. Five steps, about twenty minutes, and most of that is waiting for things to download.
 
 * **All guides and materials:** [gcodekhanna1.github.io/2026-11-enas-agentic-lab](https://gcodekhanna1.github.io/2026-11-enas-agentic-lab/)
 
-* **One laptop per table.** Your table will build on a single laptop, and you don't yet know whose. So **everyone does this setup** — the person driving needs it to work, and somebody needs to take over when their battery dies.
-
-<p class="warning">⚠️ These instructions are for a <b>Mac</b>. If you'll be bringing a Windows laptop, email us before class and we'll send you the equivalent steps. Don't leave it until the day.</p>
+* **Not the table leader?** You have nothing to install. Read the guide for the project your table chose, and come ready to talk it through.
 
 <br>
 
 ## What You'll Need
 
-* **Your Mac**, with permission to install software on it.
+* **A Mac**, with permission to install software on it.
 
-* **Your lab account.** You'll get an email with a `demo-xx` account assigned to you. Claude's sign-in link gets forwarded to the address you normally read, so there's no new mailbox to check.
+* **Your table's lab account.** Each table has one, from `demo-01` to `demo-10`. You'll get an email telling you which is yours. Claude's sign-in link gets forwarded to your own inbox, so there's no new mailbox to check.
 
 * **Your own email**, open, to click that link.
 
@@ -64,7 +62,7 @@ Two things, both free.
 
 * Choose **File → New Folder**.
 
-* Name it something you'll recognise, such as `ENAS 2170 Project`.
+* Name it something you'll recognize, such as `ENAS 2170 Project`.
 
 * **Quick check:** click the folder once and press **⌘ + I**. If the "Where" line mentions iCloud, Dropbox, OneDrive, Box or Google Drive, move it to your home folder.
 
@@ -112,9 +110,9 @@ uv --version
 
 * Open the Claude desktop app.
 
-* Sign in with the `demo-xx@paradigmventures.ai` address from the email we sent you.
+* Sign in with your table's address from the email we sent you, for example `demo-01@paradigmventures.ai`.
 
-* Claude emails you a sign-in link. **It arrives in your own inbox**, because your lab account forwards to the address you registered with.
+* Claude emails you a sign-in link. **It arrives in your own inbox**, because your table's account forwards there.
 
 * Open that link **on the same Mac** you're signing in from.
 
@@ -140,13 +138,13 @@ uv --version
 
 ## If Something Doesn't Work
 
-Email us **before class**. Every one of these takes a minute to fix beforehand and eats your build time on the day.
+Post your question in the class forum **before class**, and Kathy or a TA will help. Every one of these takes a minute to fix beforehand and eats your table's build time on the day.
 
-* **The sign-in email never arrives:** check your spam folder, then tell us. The forwarding may need fixing at our end.
+* **The sign-in email never arrives:** check your spam folder, then post in the forum. The forwarding may need fixing at our end.
 
 * **`uv --version` says "command not found":** you probably checked in the same Terminal window you installed from. Quit Terminal with **⌘ + Q**, open it fresh, and try again.
 
-* **You can't install software on your Mac:** tell us and we'll arrange something.
+* **You can't install software on your Mac:** post in the forum and we'll arrange something.
 
 * **Claude can't see your folder:** check it isn't in a synced location — see the warning in Step 01.
 
@@ -154,9 +152,9 @@ Email us **before class**. Every one of these takes a minute to fix beforehand a
 
 ## What's Next
 
-In class your table picks **one** of two projects and builds it together:
+Your table builds **one** of two projects together:
 
-* **[Lab 02 — Internship, Discovery and Planner](Lab_02_Guide_Internship_Planner.html)**
-* **[Lab 03 — Portfolio and Budget Tracker](Lab_03_Guide_Portfolio_Tracker.html)**
+* **[Lab 01 — Internship, Discovery and Planner](Lab_01_Guide_Internship_Planner.html)**
+* **[Lab 02 — Portfolio and Budget Tracker](Lab_02_Guide_Portfolio_Tracker.html)**
 
-Have a look if you're curious, but don't start building. The first part of the workshop is a conversation with your table, laptops mostly shut — and that conversation is what makes the build work.
+Have a look if you're curious, but don't start building. The first part of the workshop is a conversation with your table, laptops closed, writing on the printed template and sticky notes. That conversation is what makes the build work.
