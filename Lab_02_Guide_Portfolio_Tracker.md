@@ -28,16 +28,6 @@ This project has rich data, which makes it tempting to overbuild. The table that
 
 <br>
 
-## Before You Start
-
-* **One laptop: the table leader's.** The table leader types; everyone else plans, watches the output and proposes what to try next.
-
-* **Your table's job is not to finish.** It's to get something real running and understand how you got there.
-
-* **Laptops stay closed** until Step 02. The first thirty minutes are paper and pens — and that's the part that determines whether the build works.
-
-<br>
-
 ## What You'll Build
 
 A working page that follows a set of holdings — or a budget — and:
@@ -48,49 +38,41 @@ A working page that follows a set of holdings — or a budget — and:
 
 <br>
 
-## Step 01: Brainstorm Together — Laptops Closed
+## Step 01: Brainstorming and Discovery
 
 *About 30 minutes. Paper and pens on the table.*
 
 Write your answers down. At the end of this step you'll hand what you wrote to Claude, so write it for a reader.
 
-### Portfolio or Budget? And for Whom?
+* **Portfolio or Budget? And for Whom?**
+    - Decide which you're building. They share a shape — things with values that change over time — but the user is different.
+    - Who is this person? A student with their first few hundred dollars invested, or someone tracking spending across a semester?
+    - What question do they open it to answer? Write that question down in one sentence. Everything else serves it.
 
-* Decide which you're building. They share a shape — things with values that change over time — but the user is different.
-* Who is this person? A student with their first few hundred dollars invested, or someone tracking spending across a semester?
-* What question do they open it to answer? Write that question down in one sentence. Everything else serves it.
+* **What Does the Screen Show?**
+    - Sketch it. One page, boxes and labels.
+    - One big number at the top, or a list, or a chart? Decide and justify it.
+    - Name two things you're deliberately not building. "Everything a real brokerage app has" is the trap here.
 
-### What Does the Screen Show?
-
-* Sketch it. One page, boxes and labels.
-* One big number at the top, or a list, or a chart? Decide and justify it.
-* Name two things you're deliberately not building. "Everything a real brokerage app has" is the trap here.
-
-### Where Does the Data Come From?
-
-* You will be given a set of simulated holdings, prices and news to work with.
+* **Where Does the Data Come From?**
+    - You will be given a set of simulated holdings, prices and news to work with.
+    - What's in the data? Which parts does your one question actually need?
 
 [PLACEHOLDER - how students connect to the workshop MCP server, once the server exists]
 
-* What's in the data? Which parts does your one question actually need?
-
-### What Does It Do, Not Just Show?
-
-*This is the agentic question, and the one worth most of your time.*
-
-* A page that **displays** a portfolio is a screenshot. What does yours **do**?
-* Some directions worth arguing about:
-    - It explains the day's biggest move in a sentence, by connecting a price change to a news item.
-    - It flags when one holding has grown into too large a share of the whole.
-    - It runs each morning and writes a short summary of what changed overnight.
-    - It answers a typed question about the portfolio by going and looking rather than guessing.
-* Pick **one**. Write down what triggers it, and what the result is.
+* **What Does It Do, Not Just Show?**
+    - *This is the agentic question, and the one worth most of your time.*
+    - A page that **displays** a portfolio is a screenshot. What does yours **do**?
+    - Some directions worth arguing about:
+        - It explains the day's biggest move in a sentence, by connecting a price change to a news item.
+        - It flags when one holding has grown into too large a share of the whole.
+        - It runs each morning and writes a short summary of what changed overnight.
+        - It answers a typed question about the portfolio by going and looking rather than guessing.
+    - Pick **one**. Write down what triggers it, and what the result is.
 
 <br>
 
 ## Step 02: Turn Your Notes into a Prompt
-
-*Now the laptop opens.*
 
 * **Open a Cowork session** connected to your project folder from Lab 00.
 
@@ -124,7 +106,7 @@ This catches what your table forgot. It is also the lecture in miniature: you ar
 
 Builds take **ten minutes or more**. Plan for it.
 
-* **Stay near the laptop.** Claude pauses to ask questions and waits until someone answers.
+* **Stay close.** Claude pauses to ask questions and waits until someone answers.
 
 * **Everyone else, you have work to do.** Discuss:
     - *Why is Markdown a useful language for configuring agents?*

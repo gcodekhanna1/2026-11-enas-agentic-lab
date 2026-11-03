@@ -28,47 +28,36 @@ You want one place that holds all of it.
 
 <br>
 
-## How Your Table Works
+## Step 01: Brainstorming and Discovery
 
-* **One laptop: the table leader's.** The table leader types; everyone else thinks, argues, watches the output and proposes what to try next.
-
-* **Everyone answers the questions.** The differences between you are the most useful thing on this page.
-
-* **Your job is not to finish.** It's to get something real running and understand how you got there. Nobody expects a finished product in an hour.
-
-<br>
-
-## Step 01: Discovery — 30 Minutes
+*About 30 minutes, as a guide rather than a limit.*
 
 Work as a team to discuss the questions below. Feel free to add some of your own — these are just starters.
 
 Remember that we are building and iterating. As a group, use your judgment for when you have done enough discovery to move on to building.
 
-Write your answers down, or type them; you'll hand them to Claude at the end.
+Capture your answers on your template, whiteboard and sticky notes. You'll photograph them and hand them to Claude at the end.
 
-### Where Do You Normally Find Out About Internships?
+* **Where Do You Normally Find Out About Internships?**
+    - Public job sites, the Yale career site, a professor, a friend who already works there?
 
-Public job sites, the Yale career site, a professor, a friend who already works there?
+* **What Frustrates You Most About Applying?**
+    - Be specific. The last time it went badly, what actually went wrong?
 
-### What Frustrates You Most About Applying?
+* **What Do You Wish You Could Remember About Each One — Before You Apply, and After?**
+    - Deadlines, links, who you emailed, where you stand, what they said.
 
-Be specific. The last time it went badly, what actually went wrong?
+* **Are You Updating Your Resume / Cover Letter for Each Application? How?**
+    - If you tailor them, what do you change, and how long does it take?
 
-### What Do You Wish You Could Remember About Each One — Before You Apply, and After?
-
-Deadlines, links, who you emailed, where you stand, what they said.
-
-### Are You Updating Your Resume / Cover Letter for Each Application? How?
-
-### What Do You Find Out Too Late?
-
-What are the things you want to be notified about?
+* **What Do You Find Out Too Late?**
+    - What are the things you want to be notified about, and when?
 
 <br>
 
 ## Look Back at What You Just Wrote. That's Your Portal.
 
-You didn't design software. You described your own situation — and the thing you need falls out of it. Everything from here is construction.
+You didn't design software just yet. You described your own situation, and those are your requirements. What you build should flow naturally from them. Then you iterate, improving what you've built and adjusting it as conditions change.
 
 <br>
 
@@ -78,9 +67,11 @@ You didn't design software. You described your own situation — and the thing y
 
 * Send Claude your answers along with this:
 
+> We're a table of Yale students building an internship planner for ourselves. It should help us keep track of the internships we're applying to, remember deadlines and contacts, and stop finding things out too late. We'll build it step by step: a simple working version first, then we'll improve it.
+>
 > Here are our notes on how we track internship applications, and what goes wrong.
 >
-> [paste your answers, or attach a photo of this page]
+> [attach your photos, and add any other notes from your brainstorming]
 >
 > Build us an initial minimum viable product that we can further customize working with you.
 >
@@ -92,7 +83,7 @@ You didn't design software. You described your own situation — and the thing y
 >
 > Before you build anything: ask us up to five questions about whatever is unclear, then show us a mockup using sample data. Wait for us to approve the mockup before you write the real thing.
 
-<p class="info"><b>Hint:</b> Claude handles images and photos as input very well. Photograph this whole page with a phone and attach it — handwriting, arrows, crossings-out and all. You don't need to type any of it out.</p>
+<p class="info"><b>Hint:</b> Claude handles images and photos as input very well. Photograph your template, whiteboard and sticky notes with a phone and attach the pictures — handwriting, arrows, crossings-out and all. You don't need to type any of it out.</p>
 
 <br>
 
@@ -120,7 +111,7 @@ You didn't design software. You described your own situation — and the thing y
 
 Builds take **ten minutes or more**. Plan for it.
 
-* **Stay near the laptop.** Claude pauses to ask questions and waits until somebody answers. Nothing moves while it waits.
+* **Stay close.** Claude pauses to ask questions and waits until somebody answers. Nothing moves while it waits.
 
 * **Everyone else, you have work to do.** Discuss:
     - *Why is Markdown a useful language for configuring agents?*
@@ -141,9 +132,39 @@ Builds take **ten minutes or more**. Plan for it.
 
 <br>
 
-## Step 07: Make It Yours
+## Step 07: Make It Do Something
+
+So far your app shows you things. Now make it act. Go back to what you wrote under "What Do You Find Out Too Late?" and choose one thing worth being told about.
+
+* **Connect the workshop MCP server.** This is how Claude reaches beyond your project folder.
+
+[PLACEHOLDER - how to connect to the workshop MCP server, once it exists]
+
+* **Ask Claude for the action, in your own words.** Say what should trigger it, and whether you want a reminder email or a calendar invite. Have it sent to your table's lab account, which forwards to the table leader's inbox.
+
+* **Check that it worked.** Trigger it, then open the inbox. Did the message arrive, and is it what you asked for?
+
+<br>
+
+## Step 08: Make It Yours
 
 Whatever time is left belongs to you. Fix the thing that annoyed you most in Step 06, or add the one feature somebody keeps asking for.
+
+The real difference from a spreadsheet is one shared set of data with many views over it. Each tab asks a different question of the same data. Here are some ideas to pick from:
+
+* **A dashboard tab:** what's urgent and needs doing now.
+
+* **A "this week" tab:** everything due or needing action in the next seven days.
+
+* **A status board:** Interested, Applied, Interviewing, Offer.
+
+* **Follow-up nudges:** anything you applied to ten or more days ago with no reply.
+
+* **A checklist per application:** resume tailored, cover letter written, references asked.
+
+* **Simple stats:** applications per week and your response rate.
+
+Pick one, ask Claude for it in your own words, then test it.
 
 <br>
 
@@ -167,7 +188,7 @@ Whatever time is left belongs to you. Fix the thing that annoyed you most in Ste
 
 * **You directed an agent.** It asked, planned, used tools and built — you decided what mattered.
 
-* **A thing that displays is a page. A thing that acts is an agent.** Question 5 is where yours crossed that line.
+* **A thing that displays is a page. A thing that acts is an agent.** "What Do You Find Out Too Late?" is where yours crossed that line.
 
 <br>
 
