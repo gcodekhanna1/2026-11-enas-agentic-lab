@@ -9,7 +9,7 @@ STYLE GUIDE FOR THE LAB GUIDES (this comment doesn't appear in the preview)
 - Files, folders and email addresses: `code` style.
 - Names: Claude desktop app, Cowork, MCP, Lab 00 / Lab 01 / Lab 02.
 - Images: centered <p align="center"> block with a width, one <br> before and after.
-- Placeholders: [PLACEHOLDER - description] on its own line, with an empty line before and after.
+- Placeholders: <p align="center" style="color:#800000"><b>[PLACEHOLDER - description]</b></p> on its own line, with an empty line before and after. Delete it when the content is added.
 - Punctuation: full sentences end with a period; no double spaces; use an em dash (—), not --.
 - Spacing: one <br> (with empty lines around it) before each section heading, except the first.
 - ENAS NOTE: students write their own prompts. The Answer Sheet is a rescue rope, not the path.
@@ -58,8 +58,7 @@ Write your answers down. At the end of this step you'll hand what you wrote to C
     - You will be given a set of simulated holdings, prices and news to work with.
     - What's in the data? Which parts does your one question actually need?
 
-[PLACEHOLDER - how students connect to the workshop MCP server, once the server exists]
-
+<p align="center" style="color:#800000"><b>[PLACEHOLDER - how students connect to the workshop MCP server, once the server exists]</b></p>
 * **What Does It Do, Not Just Show?**
     - *This is the agentic question, and the one worth most of your time.*
     - A page that **displays** a portfolio is a screenshot. What does yours **do**?
@@ -158,4 +157,4 @@ Whatever time is left is yours.
 
 *Use these if your table is stuck. Reading them first spoils the exercise.*
 
-[PLACEHOLDER - suggested prompts: a starting prompt, a prompt for adding the agentic action, and two recovery prompts for common failures]
+<p align="center" style="color:#800000"><b>[PLACEHOLDER - suggested prompts: a starting prompt, a prompt for adding the agentic action, and two recovery prompts for common failures]</b></p>

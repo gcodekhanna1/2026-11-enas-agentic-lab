@@ -9,7 +9,7 @@ STYLE GUIDE FOR THE LAB GUIDES (this comment doesn't appear in the preview)
 - Files, folders and email addresses: `code` style.
 - Names: Claude desktop app, Cowork, MCP, Streamlit, uv, Ollama, Lab 00 / Lab 01 / Lab 02.
 - Images: centered <p align="center"> block with a width, one <br> before and after.
-- Placeholders: [PLACEHOLDER - description] on its own line, with an empty line before and after.
+- Placeholders: <p align="center" style="color:#800000"><b>[PLACEHOLDER - description]</b></p> on its own line, with an empty line before and after. Delete it when the content is added.
 - Punctuation: full sentences end with a period; no double spaces; use an em dash (—), not --.
 - Spacing: one <br> (with empty lines around it) before each section heading, except the first.
 - ENAS NOTE: written for the table leader, one per table, on a Mac. Nobody else installs anything.
@@ -106,7 +106,11 @@ uv --version
 
 * You should see a version number, something like `uv 0.9.x`. If you do, uv is ready.
 
-[PLACEHOLDER - screenshot of Terminal showing the uv version]
+<br>
+<p align="center">
+  <img src="Lab_00_uv_Version_Screenshot.png" alt="Terminal showing the uv version number" width="60%">
+</p>
+<br>
 
 <p class="info">Pasting a command you don't understand into a terminal is a reasonable thing to be cautious about. This one downloads the official installer from <a href="https://astral.sh/">astral.sh</a>, the company that makes uv, and installs it in your own user account — it doesn't need an administrator password and doesn't touch the rest of your Mac.</p>
 
@@ -120,11 +124,23 @@ uv --version
 
 * Open the Ollama app. A small llama icon appears in the menu bar at the top right of your screen. If you see it, Ollama is running.
 
+<br>
+<p align="center">
+  <img src="Lab_00_Ollama_Menu_Screenshot.png" alt="The Ollama menu open from the llama icon in the Mac menu bar" width="40%">
+</p>
+<br>
+
 * In Terminal, check that it worked. You should see a line like `ollama version is 0.x.x`:
 
 ```
 ollama --version
 ```
+
+<br>
+<p align="center">
+  <img src="Lab_00_Ollama_Version_Screenshot.png" alt="Terminal showing the Ollama version number" width="60%">
+</p>
+<br>
 
 * Download the model. This is the longest wait in this guide:
 
@@ -140,38 +156,47 @@ ollama run qwen3.5:4b "Say hello in one short sentence."
 
 * You should get a short reply. The first one can take a little while, because the model has to load. If you get a reply, you're done with Terminal.
 
-[PLACEHOLDER - screenshot of Terminal showing the model's reply]
-
+<p align="center" style="color:#800000"><b>[PLACEHOLDER - screenshot of Terminal showing the model's reply]</b></p>
 <br>
 
 ## Step 05: Sign In to Your Lab Account
 
 * Open the Claude desktop app.
 
-* Sign in with your table's address from the email we sent you, for example `demo-01@paradigmventures.ai`.
+* Sign in with your table's address from the email we sent you or the [Table Leaders roster](Lab_Participants%20-%20Table%20Leaders.html), for example `demo-01@paradigmventures.ai`.
 
 * Claude emails you a sign-in link. **It arrives in your own inbox**, because your table's account forwards there.
 
 * Open that link **on the same Mac** you're signing in from.
 
-[PLACEHOLDER - screenshot of the Claude sign-in screen]
-
+<p align="center" style="color:#800000"><b>[PLACEHOLDER - screenshot of the Claude sign-in screen]</b></p>
 <br>
 
 ## Step 06: Check That It Works
 
-* In the Claude desktop app, switch to **Cowork** using the control at the top of the sidebar.
+* In the Claude desktop app, make sure **Chat and Cowork** (the speech-bubble icon) is selected at the top of the sidebar.
 
-* Start a **+ New** session.
+<br>
+<p align="center">
+  <img src="Lab_00_Claude_Chat_Cowork_Toggle_Screenshot.png" alt="The Chat and Cowork button selected at the top of the Claude desktop app sidebar" width="50%">
+</p>
+<br>
 
-* Connect it to the folder you made in Step 01.
+* Click **+ New** to start a session, and select **Cowork** instead of **Chat**.
+
+<br>
+<p align="center">
+  <img src="Lab_00_Claude_New_Session_Screenshot.png" alt="Claude desktop app when you start a new session, with Cowork selected" width="60%">
+</p>
+<br>
+
+* Click **Project or folder** and select the folder you made in Step 01.
 
 * Type a short message — `Hello, can you see my project folder?` — and check that Claude answers and names your folder back to you.
 
 **That's it.** If that worked, you're set until class.
 
-[PLACEHOLDER - screenshot of a working Cowork session with the project folder connected]
-
+<p align="center" style="color:#800000"><b>[PLACEHOLDER - screenshot of a working Cowork session with the project folder connected]</b></p>
 <br>
 
 ## If Something Doesn't Work

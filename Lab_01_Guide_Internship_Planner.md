@@ -9,7 +9,7 @@ STYLE GUIDE FOR THE LAB GUIDES (this comment doesn't appear in the preview)
 - Files, folders and email addresses: `code` style.
 - Names: Claude desktop app, Cowork, MCP, Streamlit, uv, Lab 00 / Lab 01 / Lab 02.
 - Images: centered <p align="center"> block with a width, one <br> before and after.
-- Placeholders: [PLACEHOLDER - description] on its own line, with an empty line before and after.
+- Placeholders: <p align="center" style="color:#800000"><b>[PLACEHOLDER - description]</b></p> on its own line, with an empty line before and after. Delete it when the content is added.
 - Punctuation: full sentences end with a period; no double spaces; use an em dash (—), not --.
 - Spacing: one <br> (with empty lines around it) before each section heading, except the first.
 - ENAS NOTE: one document. The discovery questions and the build steps live together here.
@@ -147,8 +147,7 @@ So far your app shows you things. Now make it act. Go back to what you wrote und
 
 > Add a "Send Reminder" button to our planner. When we click it, the portal's own code should connect to the workshop MCP server at the address below and use its reminder tool to send a reminder email or calendar invite about that internship to our table's lab account.
 
-[PLACEHOLDER - workshop MCP server address, access key and the name of its reminder tool]
-
+<p align="center" style="color:#800000"><b>[PLACEHOLDER - workshop MCP server address, access key and the name of its reminder tool]</b></p>
 * **Check that it worked.** Click the button, then open the table leader's inbox. Did the message arrive, and is it what you asked for?
 
 ### Optional, If Your Table Is Ahead: Add a Chat Window
@@ -159,8 +158,7 @@ Now let your table type a request instead of clicking a button, using a small AI
 
 > Add a small chat window to our planner, using the local Ollama model that's already installed. When we type a request such as "remind us about Goldman on Friday," send it to the model and have it fill in a fixed format, using Ollama's structured outputs: the action, the internship and the date. The portal's own code should then check that answer and carry it out, using the same reminder tool as the button. If the answer doesn't fit the format, show us a message and don't send anything.
 
-[PLACEHOLDER - name of the Ollama model, once chosen and tested]
-
+<p align="center" style="color:#800000"><b>[PLACEHOLDER - name of the Ollama model, once chosen and tested]</b></p>
 * **Try it, then try to break it.** Ask for something reasonable, then something strange. What does it do when it doesn't understand you?
 
 * **Notice what you just built.** You type a request, and the system takes an action for you. A small model can handle a simple task like this without going to the cloud.
@@ -209,8 +207,7 @@ Choose what matters most, ask Claude for it in your own words, then test it.
 
 *Use these if your table is stuck. Reading them first spoils the exercise.*
 
-[PLACEHOLDER - suggested prompts: a worked starting prompt, a prompt for adding the agentic action, and two recovery prompts for common failures]
-
+<p align="center" style="color:#800000"><b>[PLACEHOLDER - suggested prompts: a worked starting prompt, a prompt for adding the agentic action, and two recovery prompts for common failures]</b></p>
 <br>
 
 ## What's Next
