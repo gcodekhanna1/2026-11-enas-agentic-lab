@@ -142,7 +142,7 @@ ollama --version
 </p>
 <br>
 
-* Download the model. This is the longest wait in this guide:
+* Download the model. This could take a couple of minutes:
 
 ```
 ollama pull qwen3.5:4b
@@ -151,12 +151,15 @@ ollama pull qwen3.5:4b
 * When that finishes, give the model one short test:
 
 ```
-ollama run qwen3.5:4b "Say hello in one short sentence."
+ollama run qwen3.5:4b --think=false "Give me a short sentence of no more than 10 words that is a greeting"
 ```
 
 * You should get a short reply. The first one can take a little while, because the model has to load. If you get a reply, you're done with Terminal.
 
-<p align="center" style="color:#800000"><b>[PLACEHOLDER - screenshot of Terminal showing the model's reply]</b></p>
+<br>
+<p align="center">
+  <img src="Lab_00_Ollama_Greeting_Screenshot.png" alt="Terminal showing a short greeting from the model" width="60%">
+</p>
 <br>
 
 ## Step 05: Sign In to Your Lab Account

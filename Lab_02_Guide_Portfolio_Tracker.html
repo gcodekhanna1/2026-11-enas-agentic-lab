@@ -26,7 +26,7 @@ p.info{background:#f9fafb;border:1px solid #e5e7eb;border-left:5px solid #9ca3af
 table.path{border-collapse:collapse;width:100%}table.path th,table.path td{border:1px solid #e5e7eb;padding:7px 10px;text-align:left;vertical-align:top}table.path th{background:#f9fafb}table.path td.skip{background:#eff6ff;color:#1e3a8a}
 @media print{p.labpc,p.info,table.path{break-inside:avoid}p.labpc,p.info,table.path td.skip{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
 
-.copybtn{position:absolute;top:8px;right:10px;display:inline-flex;align-items:center;gap:5px;font:600 .72rem/1 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;letter-spacing:.04em;color:#0b4f8a;background:#fff;border:1px solid #c9d8ee;border-radius:6px;padding:5px 9px;cursor:pointer}.copybtn:hover{background:#e3ecf7}.copybtn svg{width:14px;height:14px}.copybtn.done{color:#067647;border-color:#abefc6}@media print{.copybtn{display:none!important}}
+.copybtn{position:absolute;top:8px;right:10px;display:inline-flex;align-items:center;gap:5px;font:600 .72rem/1 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;letter-spacing:.04em;color:#0b4f8a;background:#fff;border:1px solid #c9d8ee;border-radius:6px;padding:5px 9px;cursor:pointer}.copybtn:hover{background:#e3ecf7}.copybtn svg{width:14px;height:14px}.copybtn.done{color:#067647;border-color:#abefc6}pre.hascopy{position:relative;padding-right:92px}@media print{.copybtn{display:none!important}pre.hascopy{padding-right:revert}}
 
 .topnav{position:sticky;top:0;z-index:10;background:#00356b;border-bottom:3px solid transparent;border-image:linear-gradient(90deg,#00356b,#286dc0) 1}.topnav div{max-width:1000px;margin:0 auto;padding:10px 16px;display:flex;justify-content:space-between;align-items:center;gap:12px;font:14px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}.topnav a{display:inline-block;padding:2px;border-radius:999px;background:linear-gradient(90deg,#00356b,#286dc0);text-decoration:none;flex:none}.topnav a span{display:block;background:#00356b;border-radius:999px;padding:4px 14px;font-weight:600}.topnav a b{color:#fff}.topnav a:hover span{background:transparent}.topnav a:hover b{color:#fff;background:none;-webkit-background-clip:border-box}.topnav small{color:#b9cde6;letter-spacing:.1em;text-transform:uppercase;font-size:11px;text-align:right}.bottomnav{margin-top:36px;padding-top:18px;border-top:1px solid #dce4ec}.bottomnav a{display:inline-block;font-weight:600;color:#fff;background:linear-gradient(90deg,#00356b,#286dc0);padding:7px 16px;border-radius:8px;text-decoration:none}@media(max-width:650px){.topnav small{display:none}}@media print{.topnav,.bottomnav{display:none!important}}
 </style></head><body><nav class="topnav"><div><a href="https://gcodekhanna1.github.io/2026-11-enas-agentic-lab/"><span><b>← Main Menu</b></span></a><small>ENAS 2170 · Yale</small></div></nav><main><h1>Lab 02 — Portfolio and Budget Tracker</h1>
@@ -192,17 +192,26 @@ table.path{border-collapse:collapse;width:100%}table.path th,table.path td{borde
   }
   function fallback(t){var a=document.createElement('textarea');a.value=t;a.style.position='fixed';a.style.opacity='0';
     document.body.appendChild(a);a.select();try{document.execCommand('copy');}finally{document.body.removeChild(a);}}
-  document.querySelectorAll('main blockquote').forEach(function(bq){
-    var b=document.createElement('button');b.type='button';b.className='copybtn';b.title='Copy this prompt';
+  function addCopy(host,title,getText){
+    var b=document.createElement('button');b.type='button';b.className='copybtn';b.title=title;
     b.innerHTML=ICON+'<span>Copy</span>';
     b.addEventListener('click',function(){
-      var t=toText(bq),label=b.querySelector('span');
+      var t=getText(),label=b.querySelector('span');
       var done=function(){b.classList.add('done');label.textContent='Copied!';
         setTimeout(function(){b.classList.remove('done');label.textContent='Copy';},1800);};
       if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(t).then(done,function(){fallback(t);done();});}
       else{fallback(t);done();}
     });
-    bq.appendChild(b);
+    host.appendChild(b);
+  }
+  document.querySelectorAll('main blockquote').forEach(function(bq){
+    addCopy(bq,'Copy this prompt',function(){return toText(bq);});
+  });
+  document.querySelectorAll('main pre').forEach(function(pre){
+    if(pre.closest('blockquote'))return;
+    var code=pre.querySelector('code')||pre;
+    pre.classList.add('hascopy');
+    addCopy(pre,'Copy this command',function(){return code.textContent.trim();});
   });
 })();
 </script></body></html>
