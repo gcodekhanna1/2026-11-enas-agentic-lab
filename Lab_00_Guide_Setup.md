@@ -7,24 +7,24 @@ STYLE GUIDE FOR THE LAB GUIDES (this comment doesn't appear in the preview)
 - Things to click or press: bold, with the exact wording on screen.
 - Commands: in a code block on their own line, never bold.
 - Files, folders and email addresses: `code` style.
-- Names: Claude desktop app, Cowork, MCP, Streamlit, uv, Lab 00 / Lab 01 / Lab 02.
+- Names: Claude desktop app, Cowork, MCP, Streamlit, uv, Ollama, Lab 00 / Lab 01 / Lab 02.
 - Images: centered <p align="center"> block with a width, one <br> before and after.
 - Placeholders: [PLACEHOLDER - description] on its own line, with an empty line before and after.
 - Punctuation: full sentences end with a period; no double spaces; use an em dash (—), not --.
 - Spacing: one <br> (with empty lines around it) before each section heading, except the first.
 - ENAS NOTE: written for the table leader, one per table, on a Mac. Nobody else installs anything.
-- ENAS NOTE: uv is installed here, not during class, so nothing downloads while the clock is running.
+- ENAS NOTE: uv, Ollama and the model are installed here, not during class, so nothing downloads while the clock is running.
 -->
 
 # Lab 00 — Before Class
 
-*For table leaders. About twenty minutes at home, so your table walks in ready to build.*
+*For table leaders. About 15 to 20 minutes at home, mostly waiting for downloads, so your table walks in ready to build.*
 
 ## Introduction
 
 Our class together is two hours, and nearly all of it is for thinking and building. None of it should be spent installing software or waiting for downloads.
 
-Each table builds on one laptop: the table leader's. So if your table has chosen you as its leader, everything in this guide is for you to do **before** you arrive. Five steps, about twenty minutes, and most of that is waiting for things to download.
+Each table builds on one laptop: the table leader's. So if your table has chosen you as its leader, everything in this guide is for you to do **before** you arrive. Six steps, about 15 to 20 minutes, and most of that is waiting for things to download.
 
 * **All guides and materials:** [gcodekhanna1.github.io/2026-11-enas-agentic-lab](https://gcodekhanna1.github.io/2026-11-enas-agentic-lab/)
 
@@ -34,23 +34,27 @@ Each table builds on one laptop: the table leader's. So if your table has chosen
 
 ## What You'll Need
 
-* **A Mac**, with permission to install software on it.
+* **A Mac**, with permission to install software on it. An iPad won't work.
+
+* **A local folder to build in**, such as your home folder or Documents. Never Dropbox or another folder that syncs. Step 01 shows you how.
 
 * **Your table's lab account.** Each table has one, from `demo-01` to `demo-10`. You'll get an email telling you which is yours. Claude's sign-in link gets forwarded to your own inbox, so there's no new mailbox to check.
 
 * **Your own email**, open, to click that link.
 
-* **About twenty minutes**, most of it waiting.
+* **About 15 to 20 minutes**, mostly waiting for downloads.
 
 <br>
 
 ## What You're Installing, and Why
 
-Two things, both free.
+Three things, all free.
 
 * **The Claude desktop app** — what you'll build with. Not the website: the app, because it can work with files and folders on your own machine.
 
-* **uv** — a tool that installs Python and whatever libraries an app needs, keeping each project's setup separate and tidy. You won't type `uv` commands during the workshop. The app you build uses it behind the scenes, and installing it now means nothing has to download while the class clock is running.
+* **uv** — a tool that installs Python and whatever libraries an app needs, keeping each project's setup separate and tidy. You won't type `uv` commands during the workshop. The app you build uses it behind the scenes, and installing it now means nothing has to download while you're building the portal.
+
+* **Ollama** — a tool that runs a small AI model on your own laptop. It lets your portal handle simple tasks without sending your information to the cloud. You'll also download the model here, so it's ready when your table needs it.
 
 <br>
 
@@ -80,7 +84,7 @@ Two things, both free.
 
 ## Step 03: Install uv
 
-This one happens in Terminal, which is a window where you type commands instead of clicking. You'll use it once here and probably never again during the workshop.
+This one happens in Terminal, which is a window where you type commands instead of clicking. You'll use it here and in Step 04, and probably never again during the workshop.
 
 * Open Terminal: press **⌘ + Space**, type `Terminal`, and press **Return**.
 
@@ -100,13 +104,47 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 uv --version
 ```
 
-* You should see a version number, something like `uv 0.9.x`. If you do, you're done with Terminal.
+* You should see a version number, something like `uv 0.9.x`. If you do, uv is ready.
+
+[PLACEHOLDER - screenshot of Terminal showing the uv version]
 
 <p class="info">Pasting a command you don't understand into a terminal is a reasonable thing to be cautious about. This one downloads the official installer from <a href="https://astral.sh/">astral.sh</a>, the company that makes uv, and installs it in your own user account — it doesn't need an administrator password and doesn't touch the rest of your Mac.</p>
 
 <br>
 
-## Step 04: Sign In to Your Lab Account
+## Step 04: Install Ollama and the Model
+
+<p class="info"><b>You don't need an Ollama account.</b> If Ollama asks you to sign in or create an account, close that window. Everything here runs without one.</p>
+
+* Download Ollama from [ollama.com/download](https://ollama.com/download) and install it.
+
+* Open the Ollama app. A small llama icon appears in the menu bar at the top right of your screen. If you see it, Ollama is running.
+
+* In Terminal, check that it worked. You should see a line like `ollama version is 0.x.x`:
+
+```
+ollama --version
+```
+
+* Download the model. This is the longest wait in this guide:
+
+```
+ollama pull qwen3.5:4b
+```
+
+* When that finishes, give the model one short test:
+
+```
+ollama run qwen3.5:4b "Say hello in one short sentence."
+```
+
+* You should get a short reply. The first one can take a little while, because the model has to load. If you get a reply, you're done with Terminal.
+
+[PLACEHOLDER - screenshot of Terminal showing the model's reply]
+
+<br>
+
+## Step 05: Sign In to Your Lab Account
 
 * Open the Claude desktop app.
 
@@ -120,7 +158,7 @@ uv --version
 
 <br>
 
-## Step 05: Check That It Works
+## Step 06: Check That It Works
 
 * In the Claude desktop app, switch to **Cowork** using the control at the top of the sidebar.
 
@@ -143,6 +181,10 @@ Post your question in the class forum **before class**, and Kathy or a TA will h
 * **The sign-in email never arrives:** check your spam folder, then post in the forum. The forwarding may need fixing at our end.
 
 * **`uv --version` says "command not found":** you probably checked in the same Terminal window you installed from. Quit Terminal with **⌘ + Q**, open it fresh, and try again.
+
+* **`ollama` says "command not found":** open the Ollama app once, then quit Terminal with **⌘ + Q**, open it fresh, and try again.
+
+* **The model test is slow or your Mac struggles:** close other apps and try again. If it's still a problem, post in the forum.
 
 * **You can't install software on your Mac:** post in the forum and we'll arrange something.
 

@@ -89,7 +89,7 @@ You didn't design software just yet. You described your own situation, and those
 
 ## Step 03: Answer Its Questions, Then Judge the Mockup
 
-* Claude will ask you a handful of questions. **Answer them as a table** — this is the part where the people not typing matter most.
+* Claude will ask you a handful of questions. **Answer them as a table.**
 
 * Then it shows you a mockup: a rough version with made-up data, before any real code exists.
 
@@ -107,64 +107,77 @@ You didn't design software just yet. You described your own situation, and those
 
 <br>
 
-## Step 05: While You Wait
+## Step 05: Take a Break
 
-Builds take **ten minutes or more**. Plan for it.
+Builds take **ten minutes or more**, so this is a good time for a break.
 
-* **Stay close.** Claude pauses to ask questions and waits until somebody answers. Nothing moves while it waits.
+* **Keep someone close.** Claude pauses to ask questions and waits until somebody answers. Nothing moves while it waits.
 
-* **Everyone else, you have work to do.** Discuss:
-    - *Why is Markdown a useful language for configuring agents?*
-    - Which of your five would actually use this next week — and why wouldn't the others?
-    - What could go wrong if this held real deadlines and got one wrong?
+* **When you're back, talk about what comes next:**
+    - What would you add or change first?
+    - Who at your table would actually use this next week, and what would change the others' minds?
 
 * **Compare with your neighbors.** The table next to you made different choices from the same questions.
 
 <br>
 
-## Step 06: Run It, Then Test It Properly
+## Step 06: Run It, Test It and Improve on It
 
 * Claude will tell you how to start your app and give you a web address to open.
 
-* **Each of you add one real internship you'd actually go for.** Find the posting, paste the link. Five people, five different fields.
+* **Add a few internships you'd actually go for.** Find the posting and paste the link.
 
-* That's the real test: does it work for the table, or only for whoever built it?
+* **What would you like to improve?** Did it do everything you asked for, or did it leave some things out?
+
+* **What did you learn about this process that you'd like to keep?** Ask Claude to write those best practices and design principles into a Markdown file in your project folder. Congratulations, you have your first skills file!
+
+* Next time you build something, ask Claude to read the skills file as part of the prompt.
 
 <br>
 
 ## Step 07: Make It Do Something
 
+Before you add anything, review the design. Does it look and work the way your table wants, or does it look like a default? A calendar view, a different layout or a different way of sorting might suit you better. Tell Claude what to change.
+
 So far your app shows you things. Now make it act. Go back to what you wrote under "What Do You Find Out Too Late?" and choose one thing worth being told about.
 
-* **Connect the workshop MCP server.** This is how Claude reaches beyond your project folder.
+### Every Table: Add a Send Reminder Button
 
-[PLACEHOLDER - how to connect to the workshop MCP server, once it exists]
+* **Ask Claude to add the button.** Start from this, and change it to fit what your table wants:
 
-* **Ask Claude for the action, in your own words.** Say what should trigger it, and whether you want a reminder email or a calendar invite. Have it sent to your table's lab account, which forwards to the table leader's inbox.
+> Add a "Send Reminder" button to our planner. When we click it, the portal's own code should connect to the workshop MCP server at the address below and use its reminder tool to send a reminder email or calendar invite about that internship to our table's lab account.
 
-* **Check that it worked.** Trigger it, then open the inbox. Did the message arrive, and is it what you asked for?
+[PLACEHOLDER - workshop MCP server address, access key and the name of its reminder tool]
+
+* **Check that it worked.** Click the button, then open the table leader's inbox. Did the message arrive, and is it what you asked for?
+
+### Optional, If Your Table Is Ahead: Add a Chat Window
+
+Now let your table type a request instead of clicking a button, using a small AI model running on the table leader's laptop.
+
+* **Ask Claude to add the chat window.** Start from this:
+
+> Add a small chat window to our planner, using the local Ollama model that's already installed. When we type a request such as "remind us about Goldman on Friday," send it to the model and have it fill in a fixed format, using Ollama's structured outputs: the action, the internship and the date. The portal's own code should then check that answer and carry it out, using the same reminder tool as the button. If the answer doesn't fit the format, show us a message and don't send anything.
+
+[PLACEHOLDER - name of the Ollama model, once chosen and tested]
+
+* **Try it, then try to break it.** Ask for something reasonable, then something strange. What does it do when it doesn't understand you?
+
+* **Notice what you just built.** You type a request, and the system takes an action for you. A small model can handle a simple task like this without going to the cloud.
 
 <br>
 
 ## Step 08: Make It Yours
 
-Whatever time is left belongs to you. Fix the thing that annoyed you most in Step 06, or add the one feature somebody keeps asking for.
+Whatever time is left belongs to you. Go back to your brainstorming sheet and look at your portal honestly:
 
-The real difference from a spreadsheet is one shared set of data with many views over it. Each tab asks a different question of the same data. Here are some ideas to pick from:
+* **Did it hit everything?** What's on your sheet that isn't in the portal?
 
-* **A dashboard tab:** what's urgent and needs doing now.
+* **Is it easy to use?** Could someone at your table use it without help?
 
-* **A "this week" tab:** everything due or needing action in the next seven days.
+* **Would you really use it?** If not, what would change your mind?
 
-* **A status board:** Interested, Applied, Interviewing, Offer.
-
-* **Follow-up nudges:** anything you applied to ten or more days ago with no reply.
-
-* **A checklist per application:** resume tailored, cover letter written, references asked.
-
-* **Simple stats:** applications per week and your response rate.
-
-Pick one, ask Claude for it in your own words, then test it.
+Choose what matters most, ask Claude for it in your own words, then test it.
 
 <br>
 

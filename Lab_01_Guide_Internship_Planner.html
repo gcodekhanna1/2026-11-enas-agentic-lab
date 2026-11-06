@@ -101,7 +101,7 @@ table.path{border-collapse:collapse;width:100%}table.path th,table.path td{borde
 
 <h2>Step 03: Answer Its Questions, Then Judge the Mockup</h2>
 <ul>
-<li><p>Claude will ask you a handful of questions. <strong>Answer them as a table</strong> — this is the part where the people not typing matter most.</p>
+<li><p>Claude will ask you a handful of questions. <strong>Answer them as a table.</strong></p>
 </li>
 <li><p>Then it shows you a mockup: a rough version with made-up data, before any real code exists.</p>
 </li>
@@ -121,16 +121,15 @@ table.path{border-collapse:collapse;width:100%}table.path th,table.path td{borde
 </ul>
 <br>
 
-<h2>Step 05: While You Wait</h2>
-<p>Builds take <strong>ten minutes or more</strong>. Plan for it.</p>
+<h2>Step 05: Take a Break</h2>
+<p>Builds take <strong>ten minutes or more</strong>, so this is a good time for a break.</p>
 <ul>
-<li><p><strong>Stay close.</strong> Claude pauses to ask questions and waits until somebody answers. Nothing moves while it waits.</p>
+<li><p><strong>Keep someone close.</strong> Claude pauses to ask questions and waits until somebody answers. Nothing moves while it waits.</p>
 </li>
-<li><p><strong>Everyone else, you have work to do.</strong> Discuss:</p>
+<li><p><strong>When you're back, talk about what comes next:</strong></p>
 <ul>
-<li><em>Why is Markdown a useful language for configuring agents?</em></li>
-<li>Which of your five would actually use this next week — and why wouldn't the others?</li>
-<li>What could go wrong if this held real deadlines and got one wrong?</li>
+<li>What would you add or change first?</li>
+<li>Who at your table would actually use this next week, and what would change the others' minds?</li>
 </ul>
 </li>
 <li><p><strong>Compare with your neighbors.</strong> The table next to you made different choices from the same questions.</p>
@@ -138,49 +137,63 @@ table.path{border-collapse:collapse;width:100%}table.path th,table.path td{borde
 </ul>
 <br>
 
-<h2>Step 06: Run It, Then Test It Properly</h2>
+<h2>Step 06: Run It, Test It and Improve on It</h2>
 <ul>
 <li><p>Claude will tell you how to start your app and give you a web address to open.</p>
 </li>
-<li><p><strong>Each of you add one real internship you'd actually go for.</strong> Find the posting, paste the link. Five people, five different fields.</p>
+<li><p><strong>Add a few internships you'd actually go for.</strong> Find the posting and paste the link.</p>
 </li>
-<li><p>That's the real test: does it work for the table, or only for whoever built it?</p>
+<li><p><strong>What would you like to improve?</strong> Did it do everything you asked for, or did it leave some things out?</p>
+</li>
+<li><p><strong>What did you learn about this process that you'd like to keep?</strong> Ask Claude to write those best practices and design principles into a Markdown file in your project folder. Congratulations, you have your first skills file!</p>
+</li>
+<li><p>Next time you build something, ask Claude to read the skills file as part of the prompt.</p>
 </li>
 </ul>
 <br>
 
 <h2>Step 07: Make It Do Something</h2>
+<p>Before you add anything, review the design. Does it look and work the way your table wants, or does it look like a default? A calendar view, a different layout or a different way of sorting might suit you better. Tell Claude what to change.</p>
 <p>So far your app shows you things. Now make it act. Go back to what you wrote under &quot;What Do You Find Out Too Late?&quot; and choose one thing worth being told about.</p>
+<h3>Every Table: Add a Send Reminder Button</h3>
 <ul>
-<li><strong>Connect the workshop MCP server.</strong> This is how Claude reaches beyond your project folder.</li>
+<li><strong>Ask Claude to add the button.</strong> Start from this, and change it to fit what your table wants:</li>
 </ul>
-<p>[PLACEHOLDER - how to connect to the workshop MCP server, once it exists]</p>
+<blockquote>
+<p>Add a &quot;Send Reminder&quot; button to our planner. When we click it, the portal's own code should connect to the workshop MCP server at the address below and use its reminder tool to send a reminder email or calendar invite about that internship to our table's lab account.</p>
+</blockquote>
+<p>[PLACEHOLDER - workshop MCP server address, access key and the name of its reminder tool]</p>
 <ul>
-<li><p><strong>Ask Claude for the action, in your own words.</strong> Say what should trigger it, and whether you want a reminder email or a calendar invite. Have it sent to your table's lab account, which forwards to the table leader's inbox.</p>
+<li><strong>Check that it worked.</strong> Click the button, then open the table leader's inbox. Did the message arrive, and is it what you asked for?</li>
+</ul>
+<h3>Optional, If Your Table Is Ahead: Add a Chat Window</h3>
+<p>Now let your table type a request instead of clicking a button, using a small AI model running on the table leader's laptop.</p>
+<ul>
+<li><strong>Ask Claude to add the chat window.</strong> Start from this:</li>
+</ul>
+<blockquote>
+<p>Add a small chat window to our planner, using the local Ollama model that's already installed. When we type a request such as &quot;remind us about Goldman on Friday,&quot; send it to the model and have it fill in a fixed format, using Ollama's structured outputs: the action, the internship and the date. The portal's own code should then check that answer and carry it out, using the same reminder tool as the button. If the answer doesn't fit the format, show us a message and don't send anything.</p>
+</blockquote>
+<p>[PLACEHOLDER - name of the Ollama model, once chosen and tested]</p>
+<ul>
+<li><p><strong>Try it, then try to break it.</strong> Ask for something reasonable, then something strange. What does it do when it doesn't understand you?</p>
 </li>
-<li><p><strong>Check that it worked.</strong> Trigger it, then open the inbox. Did the message arrive, and is it what you asked for?</p>
+<li><p><strong>Notice what you just built.</strong> You type a request, and the system takes an action for you. A small model can handle a simple task like this without going to the cloud.</p>
 </li>
 </ul>
 <br>
 
 <h2>Step 08: Make It Yours</h2>
-<p>Whatever time is left belongs to you. Fix the thing that annoyed you most in Step 06, or add the one feature somebody keeps asking for.</p>
-<p>The real difference from a spreadsheet is one shared set of data with many views over it. Each tab asks a different question of the same data. Here are some ideas to pick from:</p>
+<p>Whatever time is left belongs to you. Go back to your brainstorming sheet and look at your portal honestly:</p>
 <ul>
-<li><p><strong>A dashboard tab:</strong> what's urgent and needs doing now.</p>
+<li><p><strong>Did it hit everything?</strong> What's on your sheet that isn't in the portal?</p>
 </li>
-<li><p><strong>A &quot;this week&quot; tab:</strong> everything due or needing action in the next seven days.</p>
+<li><p><strong>Is it easy to use?</strong> Could someone at your table use it without help?</p>
 </li>
-<li><p><strong>A status board:</strong> Interested, Applied, Interviewing, Offer.</p>
-</li>
-<li><p><strong>Follow-up nudges:</strong> anything you applied to ten or more days ago with no reply.</p>
-</li>
-<li><p><strong>A checklist per application:</strong> resume tailored, cover letter written, references asked.</p>
-</li>
-<li><p><strong>Simple stats:</strong> applications per week and your response rate.</p>
+<li><p><strong>Would you really use it?</strong> If not, what would change your mind?</p>
 </li>
 </ul>
-<p>Pick one, ask Claude for it in your own words, then test it.</p>
+<p>Choose what matters most, ask Claude for it in your own words, then test it.</p>
 <br>
 
 <h2>If You Get Stuck</h2>

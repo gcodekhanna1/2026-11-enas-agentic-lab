@@ -30,10 +30,10 @@ table.path{border-collapse:collapse;width:100%}table.path th,table.path td{borde
 
 .topnav{position:sticky;top:0;z-index:10;background:#00356b;border-bottom:3px solid transparent;border-image:linear-gradient(90deg,#00356b,#286dc0) 1}.topnav div{max-width:1000px;margin:0 auto;padding:10px 16px;display:flex;justify-content:space-between;align-items:center;gap:12px;font:14px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}.topnav a{display:inline-block;padding:2px;border-radius:999px;background:linear-gradient(90deg,#00356b,#286dc0);text-decoration:none;flex:none}.topnav a span{display:block;background:#00356b;border-radius:999px;padding:4px 14px;font-weight:600}.topnav a b{color:#fff}.topnav a:hover span{background:transparent}.topnav a:hover b{color:#fff;background:none;-webkit-background-clip:border-box}.topnav small{color:#b9cde6;letter-spacing:.1em;text-transform:uppercase;font-size:11px;text-align:right}.bottomnav{margin-top:36px;padding-top:18px;border-top:1px solid #dce4ec}.bottomnav a{display:inline-block;font-weight:600;color:#fff;background:linear-gradient(90deg,#00356b,#286dc0);padding:7px 16px;border-radius:8px;text-decoration:none}@media(max-width:650px){.topnav small{display:none}}@media print{.topnav,.bottomnav{display:none!important}}
 </style></head><body><nav class="topnav"><div><a href="https://gcodekhanna1.github.io/2026-11-enas-agentic-lab/"><span><b>← Main Menu</b></span></a><small>ENAS 2170 · Yale</small></div></nav><main><h1>Lab 00 — Before Class</h1>
-<p><em>For table leaders. About twenty minutes at home, so your table walks in ready to build.</em></p>
+<p><em>For table leaders. About 15 to 20 minutes at home, mostly waiting for downloads, so your table walks in ready to build.</em></p>
 <h2>Introduction</h2>
 <p>Our class together is two hours, and nearly all of it is for thinking and building. None of it should be spent installing software or waiting for downloads.</p>
-<p>Each table builds on one laptop: the table leader's. So if your table has chosen you as its leader, everything in this guide is for you to do <strong>before</strong> you arrive. Five steps, about twenty minutes, and most of that is waiting for things to download.</p>
+<p>Each table builds on one laptop: the table leader's. So if your table has chosen you as its leader, everything in this guide is for you to do <strong>before</strong> you arrive. Six steps, about 15 to 20 minutes, and most of that is waiting for things to download.</p>
 <ul>
 <li><p><strong>All guides and materials:</strong> <a href="https://gcodekhanna1.github.io/2026-11-enas-agentic-lab/">gcodekhanna1.github.io/2026-11-enas-agentic-lab</a></p>
 </li>
@@ -44,23 +44,27 @@ table.path{border-collapse:collapse;width:100%}table.path th,table.path td{borde
 
 <h2>What You'll Need</h2>
 <ul>
-<li><p><strong>A Mac</strong>, with permission to install software on it.</p>
+<li><p><strong>A Mac</strong>, with permission to install software on it. An iPad won't work.</p>
+</li>
+<li><p><strong>A local folder to build in</strong>, such as your home folder or Documents. Never Dropbox or another folder that syncs. Step 01 shows you how.</p>
 </li>
 <li><p><strong>Your table's lab account.</strong> Each table has one, from <code>demo-01</code> to <code>demo-10</code>. You'll get an email telling you which is yours. Claude's sign-in link gets forwarded to your own inbox, so there's no new mailbox to check.</p>
 </li>
 <li><p><strong>Your own email</strong>, open, to click that link.</p>
 </li>
-<li><p><strong>About twenty minutes</strong>, most of it waiting.</p>
+<li><p><strong>About 15 to 20 minutes</strong>, mostly waiting for downloads.</p>
 </li>
 </ul>
 <br>
 
 <h2>What You're Installing, and Why</h2>
-<p>Two things, both free.</p>
+<p>Three things, all free.</p>
 <ul>
 <li><p><strong>The Claude desktop app</strong> — what you'll build with. Not the website: the app, because it can work with files and folders on your own machine.</p>
 </li>
-<li><p><strong>uv</strong> — a tool that installs Python and whatever libraries an app needs, keeping each project's setup separate and tidy. You won't type <code>uv</code> commands during the workshop. The app you build uses it behind the scenes, and installing it now means nothing has to download while the class clock is running.</p>
+<li><p><strong>uv</strong> — a tool that installs Python and whatever libraries an app needs, keeping each project's setup separate and tidy. You won't type <code>uv</code> commands during the workshop. The app you build uses it behind the scenes, and installing it now means nothing has to download while you're building the portal.</p>
+</li>
+<li><p><strong>Ollama</strong> — a tool that runs a small AI model on your own laptop. It lets your portal handle simple tasks without sending your information to the cloud. You'll also download the model here, so it's ready when your table needs it.</p>
 </li>
 </ul>
 <br>
@@ -92,7 +96,7 @@ table.path{border-collapse:collapse;width:100%}table.path th,table.path td{borde
 <br>
 
 <h2>Step 03: Install uv</h2>
-<p>This one happens in Terminal, which is a window where you type commands instead of clicking. You'll use it once here and probably never again during the workshop.</p>
+<p>This one happens in Terminal, which is a window where you type commands instead of clicking. You'll use it here and in Step 04, and probably never again during the workshop.</p>
 <ul>
 <li><p>Open Terminal: press <strong>⌘ + Space</strong>, type <code>Terminal</code>, and press <strong>Return</strong>.</p>
 </li>
@@ -112,13 +116,43 @@ table.path{border-collapse:collapse;width:100%}table.path th,table.path td{borde
 <pre><code>uv --version
 </code></pre>
 <ul>
-<li>You should see a version number, something like <code>uv 0.9.x</code>. If you do, you're done with Terminal.</li>
+<li>You should see a version number, something like <code>uv 0.9.x</code>. If you do, uv is ready.</li>
 </ul>
+<p>[PLACEHOLDER - screenshot of Terminal showing the uv version]</p>
 <p class="info">Pasting a command you don't understand into a terminal is a reasonable thing to be cautious about. This one downloads the official installer from <a href="https://astral.sh/">astral.sh</a>, the company that makes uv, and installs it in your own user account — it doesn't need an administrator password and doesn't touch the rest of your Mac.</p>
 
 <br>
 
-<h2>Step 04: Sign In to Your Lab Account</h2>
+<h2>Step 04: Install Ollama and the Model</h2>
+<p class="info"><b>You don't need an Ollama account.</b> If Ollama asks you to sign in or create an account, close that window. Everything here runs without one.</p>
+
+<ul>
+<li><p>Download Ollama from <a href="https://ollama.com/download">ollama.com/download</a> and install it.</p>
+</li>
+<li><p>Open the Ollama app. A small llama icon appears in the menu bar at the top right of your screen. If you see it, Ollama is running.</p>
+</li>
+<li><p>In Terminal, check that it worked. You should see a line like <code>ollama version is 0.x.x</code>:</p>
+</li>
+</ul>
+<pre><code>ollama --version
+</code></pre>
+<ul>
+<li>Download the model. This is the longest wait in this guide:</li>
+</ul>
+<pre><code>ollama pull qwen3.5:4b
+</code></pre>
+<ul>
+<li>When that finishes, give the model one short test:</li>
+</ul>
+<pre><code>ollama run qwen3.5:4b &quot;Say hello in one short sentence.&quot;
+</code></pre>
+<ul>
+<li>You should get a short reply. The first one can take a little while, because the model has to load. If you get a reply, you're done with Terminal.</li>
+</ul>
+<p>[PLACEHOLDER - screenshot of Terminal showing the model's reply]</p>
+<br>
+
+<h2>Step 05: Sign In to Your Lab Account</h2>
 <ul>
 <li><p>Open the Claude desktop app.</p>
 </li>
@@ -132,7 +166,7 @@ table.path{border-collapse:collapse;width:100%}table.path th,table.path td{borde
 <p>[PLACEHOLDER - screenshot of the Claude sign-in screen]</p>
 <br>
 
-<h2>Step 05: Check That It Works</h2>
+<h2>Step 06: Check That It Works</h2>
 <ul>
 <li><p>In the Claude desktop app, switch to <strong>Cowork</strong> using the control at the top of the sidebar.</p>
 </li>
@@ -153,6 +187,10 @@ table.path{border-collapse:collapse;width:100%}table.path th,table.path td{borde
 <li><p><strong>The sign-in email never arrives:</strong> check your spam folder, then post in the forum. The forwarding may need fixing at our end.</p>
 </li>
 <li><p><strong><code>uv --version</code> says &quot;command not found&quot;:</strong> you probably checked in the same Terminal window you installed from. Quit Terminal with <strong>⌘ + Q</strong>, open it fresh, and try again.</p>
+</li>
+<li><p><strong><code>ollama</code> says &quot;command not found&quot;:</strong> open the Ollama app once, then quit Terminal with <strong>⌘ + Q</strong>, open it fresh, and try again.</p>
+</li>
+<li><p><strong>The model test is slow or your Mac struggles:</strong> close other apps and try again. If it's still a problem, post in the forum.</p>
 </li>
 <li><p><strong>You can't install software on your Mac:</strong> post in the forum and we'll arrange something.</p>
 </li>
