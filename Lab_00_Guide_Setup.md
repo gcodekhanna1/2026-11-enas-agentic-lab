@@ -84,11 +84,11 @@ Three things, all free.
 
 ## Step 03: Install uv
 
+<p class="warning">⚠️ <b>Check you're at the command line.</b> When Terminal opens, the window should end with your name and a <code>%</code> sign, like <code>yourname@MacBook ~ %</code>. If the top of the window says <b>UW PICO</b> or <b>GNU nano</b> instead, you're in a text editor, not the command line. Press <b>Control + X</b>, and if it asks to save, press <b>N</b>.</p>
+
 This one happens in Terminal, which is a window where you type commands instead of clicking. You'll use it here and in Step 04, and probably never again during the workshop.
 
 * Open Terminal: press **⌘ + Space**, type `Terminal`, and press **Return**.
-
-* **Check you're at the command line.** The window should end with your name and a `%` sign, like `yourname@MacBook ~ %`. If the top of the window says **UW PICO** or **GNU nano** instead, you're in a text editor, not the command line. Press **Control + X**, and if it asks to save, press **N**.
 
 * Copy this line, paste it into the Terminal window, and press **Return**:
 
