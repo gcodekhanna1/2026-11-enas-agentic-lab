@@ -53,6 +53,9 @@ Capture your answers on your template, whiteboard and sticky notes. You'll photo
 * **What Do You Find Out Too Late?**
     - What are the things you want to be notified about, and when?
 
+* **What Should It Look Like When You Open It?**
+    - A list, a calendar, a dashboard of what's urgent, something else? Sketch it.
+
 <br>
 
 ## Look Back at What You Just Wrote. That's Your Portal.
@@ -65,7 +68,7 @@ You didn't design software just yet. You described your own situation, and those
 
 * **Open a Cowork session** connected to the project folder you made in Lab 00.
 
-* Send Claude your answers along with this:
+* Send Claude your answers along with the prompt below. It asks for a *minimum viable product*: the simplest version that actually works, which you'll improve from there.
 
 > We're a table of Yale students building an internship planner for ourselves. It should help us keep track of the internships we're applying to, remember deadlines and contacts, and stop finding things out too late. We'll build it step by step: a simple working version first, then we'll improve it.
 >
@@ -158,7 +161,7 @@ Now let your table type a request instead of clicking a button, using a small AI
 
 > Add a small chat window to our planner, using the local Ollama model that's already installed. When we type a request such as "remind us about Goldman on Friday," send it to the model and have it fill in a fixed format, using Ollama's structured outputs: the action, the internship and the date. The portal's own code should then check that answer and carry it out, using the same reminder tool as the button. If the answer doesn't fit the format, show us a message and don't send anything.
 
-<p align="center" style="color:#800000"><b>[PLACEHOLDER - name of the Ollama model, once chosen and tested]</b></p>
+The model is `qwen3.5:4b`, which your table leader installed in Lab 00. If Claude asks, tell it to turn off the model's thinking (`think: false`), so replies come back quickly.
 * **Try it, then try to break it.** Ask for something reasonable, then something strange. What does it do when it doesn't understand you?
 
 * **Notice what you just built.** You type a request, and the system takes an action for you. A small model can handle a simple task like this without going to the cloud.

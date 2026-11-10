@@ -67,6 +67,11 @@ table.path{border-collapse:collapse;width:100%}table.path th,table.path td{borde
 <li>What are the things you want to be notified about, and when?</li>
 </ul>
 </li>
+<li><p><strong>What Should It Look Like When You Open It?</strong></p>
+<ul>
+<li>A list, a calendar, a dashboard of what's urgent, something else? Sketch it.</li>
+</ul>
+</li>
 </ul>
 <br>
 
@@ -78,7 +83,7 @@ table.path{border-collapse:collapse;width:100%}table.path th,table.path td{borde
 <ul>
 <li><p><strong>Open a Cowork session</strong> connected to the project folder you made in Lab 00.</p>
 </li>
-<li><p>Send Claude your answers along with this:</p>
+<li><p>Send Claude your answers along with the prompt below. It asks for a <em>minimum viable product</em>: the simplest version that actually works, which you'll improve from there.</p>
 </li>
 </ul>
 <blockquote>
@@ -173,11 +178,12 @@ table.path{border-collapse:collapse;width:100%}table.path th,table.path td{borde
 <blockquote>
 <p>Add a small chat window to our planner, using the local Ollama model that's already installed. When we type a request such as &quot;remind us about Goldman on Friday,&quot; send it to the model and have it fill in a fixed format, using Ollama's structured outputs: the action, the internship and the date. The portal's own code should then check that answer and carry it out, using the same reminder tool as the button. If the answer doesn't fit the format, show us a message and don't send anything.</p>
 </blockquote>
-<p align="center" style="color:#800000"><b>[PLACEHOLDER - name of the Ollama model, once chosen and tested]</b></p>
-* **Try it, then try to break it.** Ask for something reasonable, then something strange. What does it do when it doesn't understand you?
-
+<p>The model is <code>qwen3.5:4b</code>, which your table leader installed in Lab 00. If Claude asks, tell it to turn off the model's thinking (<code>think: false</code>), so replies come back quickly.</p>
 <ul>
-<li><strong>Notice what you just built.</strong> You type a request, and the system takes an action for you. A small model can handle a simple task like this without going to the cloud.</li>
+<li><p><strong>Try it, then try to break it.</strong> Ask for something reasonable, then something strange. What does it do when it doesn't understand you?</p>
+</li>
+<li><p><strong>Notice what you just built.</strong> You type a request, and the system takes an action for you. A small model can handle a simple task like this without going to the cloud.</p>
+</li>
 </ul>
 <br>
 

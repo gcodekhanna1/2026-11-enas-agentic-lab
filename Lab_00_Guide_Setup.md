@@ -82,11 +82,13 @@ Three things, all free.
 
 <br>
 
-## ⚠️ Step 03: Install uv
+## Step 03: Install uv
 
 This one happens in Terminal, which is a window where you type commands instead of clicking. You'll use it here and in Step 04, and probably never again during the workshop.
 
 * Open Terminal: press **⌘ + Space**, type `Terminal`, and press **Return**.
+
+* ⚠️ (Make sure you're at the command line: the window should end with your name and a `%` sign, like `yourname@MacBook ~ %`. If the top of the window says **UW PICO** or **GNU nano**, you're in a text editor. Press **Control + X**, and if it asks to save, press **N**.)
 
 * Copy this line, paste it into the Terminal window, and press **Return**:
 
