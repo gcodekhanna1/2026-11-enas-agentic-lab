@@ -88,6 +88,8 @@ This one happens in Terminal, which is a window where you type commands instead 
 
 * Open Terminal: press **⌘ + Space**, type `Terminal`, and press **Return**.
 
+* **Check you're at the command line.** The window should end with your name and a `%` sign, like `yourname@MacBook ~ %`. If the top of the window says **UW PICO** or **GNU nano** instead, you're in a text editor, not the command line. Press **Control + X**, and if it asks to save, press **N**.
+
 * Copy this line, paste it into the Terminal window, and press **Return**:
 
 ```
@@ -120,7 +122,7 @@ uv --version
 
 <p class="info"><b>You don't need an Ollama account.</b> If Ollama asks you to sign in or create an account, close that window. Everything here runs without one.</p>
 
-* Download Ollama from [ollama.com/download](https://ollama.com/download) and install it.
+* Go to [ollama.com/download](https://ollama.com/download) and use the **manual download** for macOS, not the Terminal command on that page. Open the downloaded file and drag Ollama into your **Applications** folder.
 
 * Open the Ollama app. A small llama icon appears in the menu bar at the top right of your screen. If you see it, Ollama is running.
 
@@ -158,7 +160,7 @@ ollama run qwen3.5:4b --think=false "Give me a short sentence of no more than 10
 
 <br>
 <p align="center">
-  <img src="Lab_00_Ollama_Greeting_Screenshot.png" alt="Terminal showing a short greeting from the model" width="60%">
+  <img src="Lab_00_Ollama_Greeting_Screenshot.png" alt="Terminal showing a short greeting from the model" width="90%">
 </p>
 <br>
 
@@ -168,7 +170,7 @@ ollama run qwen3.5:4b --think=false "Give me a short sentence of no more than 10
 
 * Sign in with your table's address from the email we sent you or the [Table Leaders roster](Lab_Participants%20-%20Table%20Leaders.html), for example `demo-01@paradigmventures.ai`.
 
-* Claude emails you a sign-in link. **It arrives in your own inbox**, because your table's account forwards there.
+* Claude emails you a sign-in link. **It arrives in your own inbox**, because your table's account forwards there. Because it's forwarded, it can take a couple of minutes.
 
 * Open that link **on the same Mac** you're signing in from.
 
@@ -206,7 +208,7 @@ ollama run qwen3.5:4b --think=false "Give me a short sentence of no more than 10
 
 Post your question in the class forum **before class**, and Kathy or a TA will help. Every one of these takes a minute to fix beforehand and eats your table's build time on the day.
 
-* **The sign-in email never arrives:** check your spam folder, then post in the forum. The forwarding may need fixing at our end.
+* **The sign-in email never arrives:** wait a couple of minutes, then check your spam folder, then post in the forum. The forwarding may need fixing at our end.
 
 * **`uv --version` says "command not found":** you probably checked in the same Terminal window you installed from. Quit Terminal with **⌘ + Q**, open it fresh, and try again.
 
