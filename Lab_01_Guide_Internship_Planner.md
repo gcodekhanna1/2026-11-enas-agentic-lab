@@ -136,32 +136,43 @@ Builds take **ten minutes or more**, so this is a good time for a break.
 
 * Next time you build something, ask Claude to read the skills file as part of the prompt.
 
+* **Step back and look at what you've built.** Does it look and work the way your table wants, or like a default? What else would you like in it: a different layout, a calendar view, sorting, another table? Ask Claude for it, then test it.
+
 <br>
 
 ## Step 07: Make It Do Something
 
-Before you add anything, review the design. Does it look and work the way your table wants, or does it look like a default? A calendar view, a different layout or a different way of sorting might suit you better. Tell Claude what to change.
+So far, your portal shows you things. Now it's time to make it perform some actions. One thing you may want to add is reminders (you may already have this under "What Do You Find Out Too Late?").
 
-So far your app shows you things. Now make it act. Go back to what you wrote under "What Do You Find Out Too Late?" and choose one thing worth being told about.
+Remember MCP, the "USB-C port" for AI? We built an MCP server for this class, so your portal has a tool it can use to take actions. One of its tools, `send_reminder`, emails a reminder, with a calendar invite if you give it a date, to your table's lab account, which forwards to your table leader's inbox. It can only send to the lab accounts, which is generally good practice: it keeps personal email addresses masked. The server lives at `https://mcp.paradigmventures.ai/mcp`.
 
-### Every Table: Add a Send Reminder Button
+<p align="center" style="color:#800000"><b>[PLACEHOLDER - how tables get the access key]</b></p>
+
+### Suggestion: Add a Send Reminder Button
 
 * **Ask Claude to add the button.** Start from this, and change it to fit what your table wants:
 
-> Add a "Send Reminder" button to our planner. When we click it, the portal's own code should connect to the workshop MCP server at the address below and use its reminder tool to send a reminder email or calendar invite about that internship to our table's lab account.
+> Add a "Send Reminder" button to our planner. When we click it, the portal's own code should connect to the workshop MCP server at https://mcp.paradigmventures.ai/mcp and use its send_reminder tool to send a reminder email or calendar invite about that internship to our table's lab account.
+>
+> - Our table's lab account is demo-XX@paradigmventures.ai.
+> - The server's access key is: [paste your table's access key here]. Keep it in a local settings file, not in the code.
+> - Use the current official MCP Python library (`mcp`), and check how its current version works rather than relying on memory.
 
-<p align="center" style="color:#800000"><b>[PLACEHOLDER - workshop MCP server address, access key and the name of its reminder tool]</b></p>
 * **Check that it worked.** Click the button, then open the table leader's inbox. Did the message arrive, and is it what you asked for?
 
-### Optional, If Your Table Is Ahead: Add a Chat Window
+### Suggestion: Add a Chat Window
 
-Now let your table type a request instead of clicking a button, using a small AI model running on the table leader's laptop.
+Let your table type a request in plain English, using a small AI model running on the table leader's laptop.
 
 * **Ask Claude to add the chat window.** Start from this:
 
-> Add a small chat window to our planner, using the local Ollama model that's already installed. When we type a request such as "remind us about Goldman on Friday," send it to the model and have it fill in a fixed format, using Ollama's structured outputs: the action, the internship and the date. The portal's own code should then check that answer and carry it out, using the same reminder tool as the button. If the answer doesn't fit the format, show us a message and don't send anything.
+> Add a small chat window to our planner, using the local Ollama model that's already installed. When we type a request such as "remind us about Goldman on Friday," send it to the model and have it fill in a fixed format, using Ollama's structured outputs: the action, the internship and the date. The portal's own code should then check that answer and carry it out, using the workshop server's reminder tool. If the answer doesn't fit the format, show us a message and don't send anything.
+>
+> - Use the qwen3.5:4b model, with its thinking turned off (think: false), so replies come back quickly.
+> - Use the same workshop server address, lab account and access key as above, or ask us for them if we haven't given them to you yet.
 
-The model is `qwen3.5:4b`, which your table leader installed in Lab 00. If Claude asks, tell it to turn off the model's thinking (`think: false`), so replies come back quickly.
+The model, `qwen3.5:4b`, is the one your table leader installed in Lab 00.
+
 * **Try it, then try to break it.** Ask for something reasonable, then something strange. What does it do when it doesn't understand you?
 
 * **Notice what you just built.** You type a request, and the system takes an action for you. A small model can handle a simple task like this without going to the cloud.
