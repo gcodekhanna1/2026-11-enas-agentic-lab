@@ -144,9 +144,7 @@ Builds take **ten minutes or more**, so this is a good time for a break.
 
 So far, your portal shows you things. Now it's time to make it perform some actions. One thing you may want to add is reminders (you may already have this under "What Do You Find Out Too Late?").
 
-Remember MCP, the "USB-C port" for AI? We built an MCP server for this class, so your portal has a tool it can use to take actions. One of its tools, `send_reminder`, emails a reminder, with a calendar invite if you give it a date, to your table's lab account, which forwards to your table leader's inbox. It can only send to the lab accounts, which is generally good practice: it keeps personal email addresses masked. The server lives at `https://mcp.paradigmventures.ai/mcp`.
-
-<p align="center" style="color:#800000"><b>[PLACEHOLDER - how tables get the access key]</b></p>
+Remember MCP, the "USB-C port" for AI? We built an MCP server for this class, so your portal has a tool it can use to take actions. One of its tools, `send_reminder`, emails a reminder, with a calendar invite if you give it a date, to your table's lab account, which forwards to your table leader's inbox. It can only send to the lab accounts, which is generally good practice: it keeps personal email addresses masked. The server lives at `https://mcp.paradigmventures.ai/mcp`. [See how it fits together](Lab_01_How_It_Works.html).
 
 ### Suggestion: Add a Send Reminder Button
 
@@ -155,7 +153,7 @@ Remember MCP, the "USB-C port" for AI? We built an MCP server for this class, so
 > Add a "Send Reminder" button to our planner. When we click it, the portal's own code should connect to the workshop MCP server at https://mcp.paradigmventures.ai/mcp and use its send_reminder tool to send a reminder email or calendar invite about that internship to our table's lab account.
 >
 > - Our table's lab account is demo-XX@paradigmventures.ai.
-> - The server's access key is: [paste your table's access key here]. Keep it in a local settings file, not in the code.
+> - The server's access key is: `LCpM2l-L1_Vd1wybj5KPHovFDYNmKq5y`. Keep it in a local settings file, not in the code.
 > - Use the current official MCP Python library (`mcp`), and check how its current version works rather than relying on memory.
 
 * **Check that it worked.** Click the button, then open the table leader's inbox. Did the message arrive, and is it what you asked for?
