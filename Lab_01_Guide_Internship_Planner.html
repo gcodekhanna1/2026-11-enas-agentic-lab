@@ -161,10 +161,11 @@ table.path{border-collapse:collapse;width:100%}table.path th,table.path td{borde
 
 <h2>Step 07: Make It Do Something</h2>
 <p>So far, your portal shows you things. Now it's time to make it perform some actions. One thing you may want to add is reminders (you may already have this under &quot;What Do You Find Out Too Late?&quot;).</p>
-<p>Remember MCP, the &quot;USB-C port&quot; for AI? We built an MCP server for this class, so your portal has a tool it can use to take actions. One of its tools, <code>send_reminder</code>, emails a reminder, with a calendar invite if you give it a date, to your table's lab account, which forwards to your table leader's inbox. It can only send to the lab accounts, which is generally good practice: it keeps personal email addresses masked. The server lives at <code>https://mcp.paradigmventures.ai/mcp</code>. <a href="Lab_01_How_It_Works.html">See how it fits together</a>.</p>
+<p>Remember MCP, the &quot;USB-C port&quot; for AI? We built an MCP server for this class, so your portal has a tool it can use to take actions. One of its tools, <code>send_reminder</code>, emails a reminder, with a calendar invite if you give it a date, to your table's lab account, which forwards to your table leader's inbox. It can only send to the lab accounts, which is generally good practice: it keeps personal email addresses masked. The server lives at <code>https://mcp.paradigmventures.ai/mcp</code>.</p>
+<p><a href="Lab_01_How_It_Works.html">See how it fits together</a>.</p>
 <h3>Suggestion: Add a Send Reminder Button</h3>
 <ul>
-<li><strong>Ask Claude to add the button.</strong> Start from this, and change it to fit what your table wants:</li>
+<li><strong>Ask Claude to add the reminder button.</strong> Start from this, and change it to fit what your table wants:</li>
 </ul>
 <blockquote>
 <p>Add a &quot;Send Reminder&quot; button to our planner. When we click it, the portal's own code should connect to the workshop MCP server at https://mcp.paradigmventures.ai/mcp and use its send_reminder tool to send a reminder email or calendar invite about that internship to our table's lab account.</p>
