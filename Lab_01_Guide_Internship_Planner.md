@@ -127,6 +127,7 @@ Builds take **ten minutes or more**, so this is a good time for a break.
 ## Step 06: Run It, Test It and Improve on It
 
 * Claude will tell you how to start your app and give you a web address to open.
+* **Don't see a change you asked for?** When Claude says it's done, check that it restarted the portal (ask it to if it didn't), then refresh your browser page. A refresh on its own isn't always enough.
 
 * **Add a few internships you'd actually go for.** Find the posting and paste the link.
 
@@ -158,7 +159,7 @@ Remember MCP, the "USB-C port" for AI? We built an MCP server for this class, so
 > - The server's access key is: `LCpM2l-L1_Vd1wybj5KPHovFDYNmKq5y`. Keep it in a local settings file, not in the code.
 > - Use the current official MCP Python library (`mcp`), and check how its current version works rather than relying on memory.
 
-* **Check that it worked.** Click the button, then open the table leader's inbox. Did the message arrive, and is it what you asked for?
+* **Check that it worked.** Make sure Claude restarted the portal, then refresh your browser page. Click the button, then open the table leader's inbox. Did the message arrive, and is it what you asked for?
 
 ### Suggestion: Add a Chat Window
 
@@ -173,6 +174,7 @@ Let your table type a request in plain English, using a small AI model running o
 
 The model, `qwen3.5:4b`, is the one your table leader installed in Lab 00.
 
+* **Restart and refresh.** As with the button, make sure Claude restarted the portal, then refresh your browser page.
 * **Try it, then try to break it.** Ask for something reasonable, then something strange. What does it do when it doesn't understand you?
 
 * **Notice what you just built.** You type a request, and the system takes an action for you. A small model can handle a simple task like this without going to the cloud.
