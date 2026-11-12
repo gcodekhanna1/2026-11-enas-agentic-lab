@@ -158,6 +158,7 @@ Remember MCP, the "USB-C port" for AI? We built an MCP server for this class, so
 > - Our table's lab account is demo-XX@paradigmventures.ai.
 > - The server's access key is: `LCpM2l-L1_Vd1wybj5KPHovFDYNmKq5y`. Keep it in a local settings file, not in the code.
 > - Use the current official MCP Python library (`mcp`), and check how its current version works rather than relying on memory.
+> - Don't send real reminders while you test. We'll send the first one ourselves from the portal.
 
 * **Check that it worked.** Make sure Claude restarted the portal (if it doesn't tell you, ask it how). Then refresh your browser page. Verify that the reminder button is there. Click the reminder button, then open the table leader's inbox. Did the message arrive, and is it what you asked for?
 
@@ -171,11 +172,20 @@ Adding a chat window lets your table type a request in plain English, using a sm
 >
 > - Use the qwen3.5:4b model, with its thinking turned off (think: false), so replies come back quickly.
 > - Use the same workshop server address, lab account and access key as above, or ask us for them if we haven't given them to you yet.
+> - Don't install Ollama or download the model in your own workspace to test it. You can't reach the one on our laptop from there. Write the code, test the checking with a few sample answers, and we'll try it with the real model when we run the portal.
+> - Make the chat window easy to find: put it near the top of the sidebar, with a clear heading and a text box a few lines tall.
+> - Don't send real reminders while you test. We'll send the first one ourselves from the portal.
+> - Keep it simple: a first version we can try within a few minutes. We'll tell you what to improve.
 
 The model, `qwen3.5:4b`, is the one your table leader installed in Lab 00.
 
-* **Restart and refresh.** As with the button, make sure Claude restarted the portal, then refresh your browser page.
+* **Restart and refresh.** As with the button, make sure Claude restarted the portal (if it doesn't tell you, ask it how), then refresh your browser page.
 * **Try it, then try to break it.** Ask for something reasonable, then something strange. What does it do when it doesn't understand you?
+* **Look under the hood.** Before the model reads your message, your portal gives it instructions of its own: a system prompt. What do you think it says? Ask Claude to show you:
+
+> Add a "System Prompt" page to the sidebar that shows the exact instructions the portal sends to the model with each message, and lets us edit and save them, with a button to restore the original.
+
+* **Change one rule and see what happens.** It's the same idea as the skills file you wrote in Step 06.
 
 * **Notice what you just built.** You type a request, and the system takes an action for you. A small model can handle a simple task like this without going to the cloud.
 
