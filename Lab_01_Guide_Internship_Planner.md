@@ -183,7 +183,7 @@ The model, `qwen3.5:4b`, is the one your table leader installed in Lab 00.
 * **Try it, then try to break it.** Ask for something reasonable, then something strange. What does it do when it doesn't understand you?
 * **Look under the hood.** Before the model reads your message, your portal gives it instructions of its own: a system prompt. What do you think it says? Ask Claude to show you:
 
-> Add a "System Prompt" page to the sidebar that shows the exact instructions the portal sends to the model with each message, and lets us edit and save them, with a button to restore the original.
+> Add a "System Prompt" page to the sidebar that shows the exact instructions the portal sends to the model with each message, and lets us edit and save them, with a button to restore the original. Don't test it with the model yourself; we'll try it in the portal.
 
 * **Change one rule and see what happens.** It's the same idea as the skills file you wrote in Step 06.
 
