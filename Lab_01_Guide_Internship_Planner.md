@@ -149,7 +149,7 @@ Remember MCP, the "USB-C port" for AI? We built an MCP server for this class, so
 
 [See how it fits together](Lab_01_How_It_Works.html).
 
-### Suggestion: Add a Send Reminder Button
+### Suggestion: Add a "Send Reminder" Button
 
 * **Ask Claude to add the reminder button.** Start from this, and change it to fit what your table wants:
 
@@ -159,11 +159,11 @@ Remember MCP, the "USB-C port" for AI? We built an MCP server for this class, so
 > - The server's access key is: `LCpM2l-L1_Vd1wybj5KPHovFDYNmKq5y`. Keep it in a local settings file, not in the code.
 > - Use the current official MCP Python library (`mcp`), and check how its current version works rather than relying on memory.
 
-* **Check that it worked.** Make sure Claude restarted the portal, then refresh your browser page. Click the button, then open the table leader's inbox. Did the message arrive, and is it what you asked for?
+* **Check that it worked.** Make sure Claude restarted the portal (if it doesn't tell you, ask it how). Then refresh your browser page. Verify that the reminder button is there. Click the reminder button, then open the table leader's inbox. Did the message arrive, and is it what you asked for?
 
 ### Suggestion: Add a Chat Window
 
-Let your table type a request in plain English, using a small AI model running on the table leader's laptop.
+Adding a chat window lets your table type a request in plain English, using a small AI model running on the table leader's laptop. Now the portal becomes a place where you can start requesting increasingly sophisticated tasks.
 
 * **Ask Claude to add the chat window.** Start from this:
 
