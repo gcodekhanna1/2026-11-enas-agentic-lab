@@ -28,7 +28,9 @@ Each table builds on one laptop: the table leader's. So if your table has chosen
 
 * **All guides and materials:** [gcodekhanna1.github.io/2026-11-enas-agentic-lab](https://gcodekhanna1.github.io/2026-11-enas-agentic-lab/)
 
-* **Not the table leader?** You have nothing to install. Read the guide for the project your table chose, and come ready to talk it through.
+* **The backup table leader?** Do Steps 01 to 04 too, so your Mac is ready if you need to step in. Skip Steps 05 and 06.
+
+* **Not the table leader or the backup?** You have nothing to install. Read the guide for the project your table chose, and come ready to talk it through.
 
 <br>
 
@@ -165,6 +167,8 @@ ollama run qwen3.5:4b --think=false "Give me a short sentence of no more than 10
 <br>
 
 ## Step 05: Sign In to Your Lab Account
+
+<p class="info"><b>Table leaders only.</b> Do this step once you've received the email telling you which lab account is your table's. Backups: stop after Step 04. If you end up stepping in for your table leader, the teaching team will move the sign-in emails to you, and you'll do Steps 05 and 06 then.</p>
 
 * Open the Claude desktop app.
 
