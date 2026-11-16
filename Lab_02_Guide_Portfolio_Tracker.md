@@ -7,128 +7,230 @@ STYLE GUIDE FOR THE LAB GUIDES (this comment doesn't appear in the preview)
 - Things to click or press: bold, with the exact wording on screen.
 - Commands: in a code block on their own line, never bold.
 - Files, folders and email addresses: `code` style.
-- Names: Claude desktop app, Cowork, MCP, Lab 00 / Lab 01 / Lab 02.
+- Names: Claude desktop app, Cowork, MCP, Streamlit, uv, Lab 00 / Lab 01 / Lab 02.
 - Images: centered <p align="center"> block with a width, one <br> before and after.
 - Placeholders: <p align="center" style="color:#800000"><b>[PLACEHOLDER - description]</b></p> on its own line, with an empty line before and after. Delete it when the content is added.
 - Punctuation: full sentences end with a period; no double spaces; use an em dash (—), not --.
 - Spacing: one <br> (with empty lines around it) before each section heading, except the first.
-- ENAS NOTE: students write their own prompts. The Answer Sheet is a rescue rope, not the path.
-- ENAS NOTE: tracking and explaining only. No buy/sell advice, no real brokerage connection.
+- ENAS NOTE: one document. The discovery questions and the build steps live together here. Lab 01 is the model: keep the two guides parallel.
+- ENAS NOTE: students write their own prompt. The Answer Sheet is a rescue rope, not the path.
+- ENAS NOTE: stocks and investments only — no budget variant. Tracking and explaining only: no buy/sell advice, no real brokerage connection.
 -->
 
-# Lab 02 — Portfolio and Budget Tracker
+# Lab 02 — Stock and Investments Tracker
 
-*Follow a basket of companies, or a budget, and understand what moved and why.*
+*Thirty minutes describing the problem. The rest of the session building the answer.*
 
-## Introduction
+## The Goal
 
-This project has rich data, which makes it tempting to overbuild. The table that tries to show everything ends up showing nothing. The table that picks one question and answers it well ends up with something worth demoing.
+Maybe you've just put your first few hundred dollars into the market, or you follow a handful of companies you care about. Either way, the prices move every day, the headlines never stop, and it's hard to tell what actually matters — or why anything moved at all.
 
-<p class="warning">⚠️ This is a <b>tracking and explaining</b> tool, not an advice tool. It doesn't tell anyone what to buy or sell, and it never connects to a real brokerage account or real money. The data you'll use is simulated.</p>
+You want one place that shows how your investments are doing, and explains what changed and why.
 
-<br>
-
-## What You'll Build
-
-A working page that follows a set of holdings — or a budget — and:
-
-* Shows what changed.
-* Explains *why*, in plain language, using news and context rather than numbers alone.
-* **Does something** with that, instead of waiting to be looked at.
+* ⚠️ **This is a tracking and explaining tool, not an advice tool.** It doesn't tell anyone what to buy or sell, and it never connects to a real brokerage account or real money.
 
 <br>
 
 ## Step 01: Brainstorming and Discovery
 
-*About 30 minutes. Paper and pens on the table.*
+*About 30 minutes, as a guide rather than a limit.*
 
-Write your answers down. At the end of this step you'll hand what you wrote to Claude, so write it for a reader.
+Work as a team to discuss the questions below. Feel free to add some of your own — these are just starters.
 
-* **Portfolio or Budget? And for Whom?**
-    - Decide which you're building. They share a shape — things with values that change over time — but the user is different.
-    - Who is this person? A student with their first few hundred dollars invested, or someone tracking spending across a semester?
-    - What question do they open it to answer? Write that question down in one sentence. Everything else serves it.
+Remember that we are building and iterating. As a group, use your judgment for when you have done enough discovery to move on to building.
 
-* **What Does the Screen Show?**
-    - Sketch it. One page, boxes and labels.
-    - One big number at the top, or a list, or a chart? Decide and justify it.
-    - Name two things you're deliberately not building. "Everything a real brokerage app has" is the trap here.
+Capture your answers on your template, whiteboard and sticky notes. You'll photograph them and hand them to Claude at the end.
 
-* **Where Does the Data Come From?**
-    - You will be given a set of simulated holdings, prices and news to work with.
-    - What's in the data? Which parts does your one question actually need?
+* **Who Is This For?**
+    - A student with their first few hundred dollars invested, a parent, a campus investment club? Pick one person and keep them in mind.
 
-<p align="center" style="color:#800000"><b>[PLACEHOLDER - how students connect to the workshop MCP server, once the server exists]</b></p>
-* **What Does It Do, Not Just Show?**
-    - *This is the agentic question, and the one worth most of your time.*
-    - A page that **displays** a portfolio is a screenshot. What does yours **do**?
-    - Some directions worth arguing about:
-        - It explains the day's biggest move in a sentence, by connecting a price change to a news item.
-        - It flags when one holding has grown into too large a share of the whole.
-        - It runs each morning and writes a short summary of what changed overnight.
-        - It answers a typed question about the portfolio by going and looking rather than guessing.
-    - Pick **one**. Write down what triggers it, and what the result is.
+* **How Do You Follow Investments Today?**
+    - A brokerage app, news alerts, a group chat, social media, not at all? What works, and what's annoying?
+
+* **When a Price Moves, What Do You Wish You Understood?**
+    - Why did it move? Is it a big move for this company, or a normal day? Did anything happen in the news?
+
+* **What Should It Warn You About?**
+    - A big drop, too much of your money in one company, news about something you own? When would you want to hear about it?
+
+* **What Would You Never Want It to Do?**
+    - Where's the line between a tool that explains and a tool that tells you what to do? Write down two things it must not do.
+
+* **What Should It Look Like When You Open It?**
+    - One big number, a list, a chart, a short summary of the day? Sketch it.
 
 <br>
 
-## Step 02: Turn Your Notes into a Prompt
+## Look Back at What You Just Wrote. That's Your Portal.
 
-* **Open a Cowork session** connected to your project folder from Lab 00.
-
-* **Two ways to get your plan in**, and the second is usually better:
-    - Type it out.
-    - **Photograph your notes** with a phone and attach the picture. Claude reads handwriting and sketches, and your sketch of the screen is usually clearer than a paragraph describing it.
-
-* Write the prompt in your own words: who it's for, what the screen shows, where the data comes from, what it does.
+You didn't design software just yet. You described your own situation, and those are your requirements. What you build should flow naturally from them. Then you iterate, improving what you've built and adjusting it as conditions change.
 
 <br>
 
-## Step 03: Let Claude Interview You
+## Step 02: Hand It to Claude
 
-*Optional, and recommended. Five minutes that saves twenty.*
+* **Open a Cowork session** connected to the project folder you made in Lab 00.
 
-> Before you build anything, interview me. Ask me five multiple-choice questions about what I want, one at a time. Then write a short plan as `MVP Plan.md` and show me a simple mockup with sample data. Wait for me to approve it before you write any other code.
+* Send Claude your answers along with the prompt below. It asks for a *minimum viable product*: the simplest version that actually works, which you'll improve from there.
 
-This catches what your table forgot. It is also the lecture in miniature: you are directing an agent, not placing an order.
+> We're a table of Yale students building a stock and investments tracker for ourselves. It should show how a set of investments is doing, and explain what changed and why, in plain language. It's for tracking and explaining only: it must never tell us what to buy or sell, and it never connects to a real brokerage account. We'll build it step by step: a simple working version first, then we'll improve it.
+>
+> Here are our notes on how we follow investments today, and what we wish we understood.
+>
+> [attach your photos, and add any other notes from your brainstorming]
+>
+> Build us an initial minimum viable product that we can further customize working with you.
+>
+> Build it with:
+> - Streamlit, in Python. Please don't use a different framework.
+> - uv to install whatever it needs.
+> - One start file, so we can run it again later with a single command.
+> - Sample data so we can see it working right away: about seven well-known stocks, such as Apple (AAPL), Tesla (TSLA), Nvidia (NVDA) and Microsoft (MSFT), with made-up prices and headlines clearly labelled as sample data. Let us keep, remove or add stocks. We'll connect it to live market data later.
+>
+> Before you build anything: ask us up to five questions about whatever is unclear, then show us a mockup using sample data. Wait for us to approve the mockup before you write the real thing.
+
+<p class="info"><b>Hint:</b> Claude handles images and photos as input very well. Photograph your template, whiteboard and sticky notes with a phone and attach the pictures — handwriting, arrows, crossings-out and all. You don't need to type any of it out.</p>
+
+<br>
+
+## Step 03: Answer Its Questions, Then Judge the Mockup
+
+* Claude will ask you a handful of questions. **Answer them as a table.**
+
+* Then it shows you a mockup: a rough version with made-up data, before any real code exists.
+
+* **Look at it properly.** Is this the thing you described? What's missing? What's there that nobody asked for?
+
+* Say what's wrong and ask for another one. **Do not approve a mockup you don't like** — changing it now costs seconds, changing it after the build costs ten minutes.
 
 <br>
 
 ## Step 04: Build It
 
-* Send your prompt.
+* When the mockup is right, tell Claude to go ahead.
 
-* Claude will ask permission before it does things. **Click Allow** — or **Allow for this task** to reduce the clicking.
-
-<br>
-
-## Step 05: While You Wait
-
-Builds take **ten minutes or more**. Plan for it.
-
-* **Stay close.** Claude pauses to ask questions and waits until someone answers.
-
-* **Everyone else, you have work to do.** Discuss:
-    - *Why is Markdown a useful language for configuring agents?*
-    - Your app will explain *why* something moved. How would you know if that explanation were wrong?
-    - Where's the line between a tool that explains and a tool that advises — and why does it matter here?
-
-* **Compare with your neighbors.**
+* Claude asks permission before it does things. Click **Allow**, or **Allow for this task** to reduce the clicking.
 
 <br>
 
-## Step 06: Run It and Try It
+## Step 05: Take a Break
+
+Builds take **ten minutes or more**, so this is a good time for a break.
+
+* **Keep someone close.** Claude pauses to ask questions and waits until somebody answers. Nothing moves while it waits.
+
+* **When you're back, talk about what comes next:**
+    - Your portal will explain *why* something moved. How would you know if that explanation were wrong?
+    - Where's the line between explaining and advising, and why does it matter for a tool like this?
+
+* **Compare with your neighbors.** The table next to you made different choices from the same questions.
+
+<br>
+
+## Step 06: Run It, Test It and Improve on It
 
 * Claude will tell you how to start your app and give you a web address to open.
+* **Don't see a change you asked for?** When Claude says it's done, check that it restarted the portal (ask it to if it didn't), then refresh your browser page. A refresh on its own isn't always enough.
 
-* Ask it the one question you wrote down in Step 01. Does it answer it?
+* **Make the list your own.** Remove stocks you don't care about and add the ones you do. The prices are still made up; you'll make them live in Step 07.
 
-* Find one thing that's wrong or missing. That's your next prompt.
+* **Use it as your person would.** Can you tell, at a glance, how the investments are doing today?
+
+* **What would you like to improve?** Did it do everything you asked for, or did it leave some things out?
+
+* **What did you learn about this process that you'd like to keep?** Ask Claude to write those best practices and design principles into a Markdown file in your project folder. Congratulations, you have your first skills file!
+
+* Next time you build something, ask Claude to read the skills file as part of the prompt.
+
+* **Step back and look at what you've built.** Does it look and work the way your table wants, or like a default? What else would you like in it: a chart, a different layout, sorting, a summary at the top? Ask Claude for it, then test it.
 
 <br>
 
-## Step 07: Add Your Own Twist
+## Step 07: Make It Live, Then Make It Do Something
 
-Whatever time is left is yours.
+So far, your portal shows you made-up prices. Now it's time to connect it to the market, and have it act on what it finds.
+
+Remember MCP, the "USB-C port" for AI? We built an MCP server for this class, so your portal has tools it can use. For this lab, it serves:
+
+* **Live market quotes:** real prices for real stocks, such as Apple or Nvidia. Market data services usually charge for this; the workshop server fetches the quotes from one on the whole class's behalf and shares them, so your table doesn't need its own paid subscription. The 100 largest companies in the S&P 500 are ready before class starts; any other stock is fetched the first time someone asks for it.
+* **A practice portfolio:** seven made-up companies, with prices, price history and news that line up with the price moves, so a portal can explain *why* something moved. Useful for trying ideas the live market can't give you on demand.
+
+The server lives at `https://mcp.paradigmventures.ai/mcp`.
+
+### Make It Live
+
+* **Ask Claude to swap your made-up prices for live ones.** Start from this, and change it to fit what your table wants:
+
+> Connect our tracker to the workshop MCP server at https://mcp.paradigmventures.ai/mcp, and replace our made-up prices with live ones from its get_live_quote tool, for every stock on our list. Keep our list as it is, and keep letting us add and remove stocks.
+>
+> - Our table's lab account is demo-XX@paradigmventures.ai. Pass it as the `table` value on every call, so the workshop staff can see which table is calling.
+> - The server's access key is: `LCpM2l-L1_Vd1wybj5KPHovFDYNmKq5y`. Keep it in a local settings file, not in the code.
+> - Use the current official MCP Python library (`mcp`), and check how its current version works rather than relying on memory.
+> - The quotes are shared by the whole class: fetch them when the page loads and when we press a Refresh button, at most once a minute, never in a loop.
+> - If a quote comes back marked stale, show that it's the last known price. If the server says it's busy, show that message and let us try again.
+> - Keep it simple: a first version we can try within a few minutes. We'll tell you what to improve.
+
+* **Check that it worked.** Make sure Claude restarted the portal (if it doesn't tell you, ask it how). Then refresh your browser page. Do the prices match what you'd see in a news app? Add a stock that isn't on your list yet, and watch it appear.
+
+* **Good to know: live quotes come with prices, not news.** Explaining a real move is a hard problem, and a good one to talk about: where would your portal get the reason?
+
+### Suggestion: Make It Warn You
+
+A tracker that only shows numbers waits for you to notice things. One that warns you does the noticing for you. You may already have this under "What Should It Warn You About?"
+
+* **Ask Claude for the warning your table wants.** For example, if your portal knows how many shares you own, a warning when too much of your money sits in one company:
+
+> Add a warning to our tracker when any one stock is more than 25% of our portfolio's value, using the live prices and the number of shares we entered. Show it at the top of the page, in plain words: which company, what share of the portfolio it is, and why that matters. Let us change the 25% from the page.
+>
+> - Don't tell us what to buy or sell. Explain the risk; we decide.
+
+* **Want the warning in your inbox?** The workshop server can also email your table's lab account, the same tool Lab 01 uses (`send_reminder`). Ask Claude to add an **Email This Warning** button, and tell it not to send real emails while it tests. You'll send the first one yourselves from the portal.
+
+### Suggestion: Explain Why, with the Practice Portfolio
+
+The practice portfolio's news lines up with its price moves, so you can build the "why did it move?" feature now and see it work.
+
+* **Ask Claude to add a Practice Portfolio page:**
+
+> Add a Practice Portfolio page to our tracker, using the workshop server's practice data: get_holdings for the portfolio, get_prices for the day's prices, get_price_history for charts and get_news for the headlines. Use the same server address, lab account (as `table`) and access key as before. For the biggest price moves today and over the past week, show the headline that explains each one beside the move, in one sentence. If there's no matching headline, say so rather than guessing.
+
+* **Try it, then question it.** Pick one explanation and check it against the news yourselves. Is it right? How would you know if it weren't? And look at how the portfolio is split: does anything deserve a warning?
+
+### Suggestion: Add a Chat Window
+
+Adding a chat window lets your table ask about your stocks in plain English, using a small AI model running on the table leader's laptop.
+
+* **Ask Claude to add the chat window.** Start from this:
+
+> Add a small chat window to our tracker, using the local Ollama model that's already installed. When we type a question such as "how is Nvidia doing today?", send it to the model and have it fill in a fixed format, using Ollama's structured outputs: the kind of question (how it's doing, how it moved, or how much of the portfolio it is) and the stock. The portal's own code should then check that answer, get the facts from the workshop server and show them. If the answer doesn't fit the format, show us a message instead.
+>
+> - Use the qwen3.5:4b model, with its thinking turned off (think: false), so replies come back quickly.
+> - Use the same workshop server address, lab account and access key as above, or ask us for them if we haven't given them to you yet.
+> - Don't install Ollama or download the model in your own workspace to test it. You can't reach the one on our laptop from there. Write the code, test the checking with a few sample answers, and we'll try it with the real model when we run the portal.
+> - Make the chat window easy to find: put it near the top of the sidebar, with a clear heading and a text box a few lines tall.
+> - The portal must never tell us to buy or sell. If we ask for advice, it should say it only explains.
+> - Keep it simple: a first version we can try within a few minutes. We'll tell you what to improve.
+
+The model, `qwen3.5:4b`, is the one your table leader installed in Lab 00.
+
+* **Restart and refresh.** As before, make sure Claude restarted the portal (if it doesn't tell you, ask it how), then refresh your browser page.
+* **Try it, then try to break it.** Ask something reasonable, then something strange. Ask it which stock to buy. What does it do?
+
+* **Notice what you just built.** Your portal goes and gets facts from another system, decides whether something deserves a warning, and tells you without being asked. A thing that only displays is a page; a thing that acts is an agent.
+
+<br>
+
+## Step 08: Make It Yours
+
+Whatever time is left belongs to you. Go back to your brainstorming sheet and look at your portal honestly:
+
+* **Did it hit everything?** What's on your sheet that isn't in the portal?
+
+* **Is it easy to use?** Could someone at your table use it without help?
+
+* **Would you really use it?** If not, what would change your mind?
+
+Choose what matters most, ask Claude for it in your own words, then test it.
 
 <br>
 
@@ -138,18 +240,25 @@ Whatever time is left is yours.
 
 * **Claude seems frozen:** look for a permission prompt waiting for a click.
 
-* **The app won't start:** paste the error message back to Claude and ask it to fix it. This is normal.
+* **The app won't start:** paste the error message back to Claude and ask it to fix it. This is normal and expected — it is not a sign you did something wrong.
 
-* **You're out of ideas:** see the Answer Sheet below.
+* **Live quotes say "busy" or "stale":** the whole class shares them. Wait a minute and press Refresh.
+
+* **You're out of ideas:** see the Answer Sheet at the bottom.
 
 <br>
 
 ## Key Takeaways
 
-* The thirty minutes on paper did more for your build than any single prompt.
-* You directed an agent. It planned, used tools and acted — you decided what mattered.
-* The gap between "displays information" and "does something" is the gap between an app and an agent.
-* An explanation produced by a model is a claim, not a fact. Knowing how you'd check it is part of building responsibly.
+* **The thirty minutes of talking did more for your build than any single prompt.** You described a problem; the design came out of the description.
+
+* **You reviewed a plan before accepting the work.** That one habit separates people who get good results from people who get impressive-looking ones that break.
+
+* **You directed an agent.** It asked, planned, used tools and built — you decided what mattered. And your skills file means the next build starts from what you learned.
+
+* **A thing that displays is a page. A thing that acts is an agent.** Going live, the warning and the explanation are where your tracker crossed that line.
+
+* **An explanation produced by a model is a claim, not a fact.** Knowing how you'd check it is part of building responsibly.
 
 <br>
 
@@ -157,4 +266,24 @@ Whatever time is left is yours.
 
 *Use these if your table is stuck. Reading them first spoils the exercise.*
 
-<p align="center" style="color:#800000"><b>[PLACEHOLDER - suggested prompts: a starting prompt, a prompt for adding the agentic action, and two recovery prompts for common failures]</b></p>
+* **A worked starting prompt,** for a table building for first-time investors:
+
+> We're a table of Yale students building a stock tracker for a student who has just invested their first $500 and checks it on their phone between classes. When they open it, they want to know in five seconds: am I up or down today, and why? They don't want charts full of numbers, and they never want to be told what to buy or sell. Build us an initial minimum viable product: one page with the total value and the day's change at the top, then each holding with its change and a one-line reason. Use Streamlit, in Python, with uv, one start file, and sample data for a few well-known stocks we can change. Ask us up to five questions first, then show us a mockup and wait for our approval.
+
+* **The portal can't get data from the workshop server:**
+
+> Our portal can't get data from the workshop server. Show us the exact error. Then check: the address ends in /mcp, the access key is read from our settings file, and the code uses the current version of the official `mcp` library. Make one call to get_live_quote for AAPL and show us the result before changing anything else.
+
+* **Claude keeps tuning and nothing changes on screen:**
+
+> Stop here. Give us the simplest version that works right now, restart the portal, and tell us what to click to see it. We'll decide what to improve next.
+
+* **The explanation doesn't match the news (practice portfolio):**
+
+> The explanation for [company] doesn't match the headline. Show us the price change and the headlines you used, then only explain a move when a headline from get_news matches the company and the day. Otherwise say there's no news for it.
+
+<br>
+
+## What's Next
+
+Your app lives in your project folder. Share it with your table, keep building, or start something else entirely — you now know how.
