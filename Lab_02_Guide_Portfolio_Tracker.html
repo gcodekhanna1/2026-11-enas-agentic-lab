@@ -171,9 +171,9 @@ table.path{border-collapse:collapse;width:100%}table.path th,table.path td{borde
 <p>Remember MCP, the &quot;USB-C port&quot; for AI? We built an MCP server for this class, so your portal has tools it can use. For this lab, it serves:</p>
 <ul>
 <li><strong>Live market quotes:</strong> real prices for real stocks, such as Apple or Nvidia. Market data services usually charge for this; the workshop server fetches the quotes from one on the whole class's behalf and shares them, so your table doesn't need its own paid subscription. The 100 largest companies in the S&amp;P 500 are ready before class starts; any other stock is fetched the first time someone asks for it.</li>
-<li><strong>A practice portfolio:</strong> seven made-up companies, with prices, price history and news that line up with the price moves, so a portal can explain <em>why</em> something moved. Useful for trying ideas the live market can't give you on demand.</li>
+<li><strong>A mock portfolio:</strong> seven made-up companies, with prices, price history and news that line up with the price moves, so a portal can explain <em>why</em> something moved. Useful for trying ideas the live market can't give you on demand.</li>
 </ul>
-<p>The server lives at <code>https://mcp.paradigmventures.ai/mcp</code>.</p>
+<p>The server lives at <code>https://mcp.paradigmventures.ai/mcp</code>. <a href="Lab_02_How_It_Works.html">See how it fits together</a>.</p>
 <h3>Make It Live</h3>
 <ul>
 <li><strong>Ask Claude to swap your made-up prices for live ones.</strong> Start from this, and change it to fit what your table wants:</li>
@@ -209,13 +209,13 @@ table.path{border-collapse:collapse;width:100%}table.path th,table.path td{borde
 <ul>
 <li><strong>Want the warning in your inbox?</strong> The workshop server can also email your table's lab account, the same tool Lab 01 uses (<code>send_reminder</code>). Ask Claude to add an <strong>Email This Warning</strong> button, and tell it not to send real emails while it tests. You'll send the first one yourselves from the portal.</li>
 </ul>
-<h3>Suggestion: Explain Why, with the Practice Portfolio</h3>
-<p>The practice portfolio's news lines up with its price moves, so you can build the &quot;why did it move?&quot; feature now and see it work.</p>
+<h3>Suggestion: Explain Why, with the Mock Portfolio</h3>
+<p>The mock portfolio is seven made-up companies whose news explains every price move, so you can build the &quot;why did it move?&quot; feature now and see it work.</p>
 <ul>
-<li><strong>Ask Claude to add a Practice Portfolio page:</strong></li>
+<li><strong>Ask Claude to add a Mock Portfolio page:</strong></li>
 </ul>
 <blockquote>
-<p>Add a Practice Portfolio page to our tracker, using the workshop server's practice data: get_holdings for the portfolio, get_prices for the day's prices, get_price_history for charts and get_news for the headlines. Use the same server address, lab account (as <code>table</code>) and access key as before. For the biggest price moves today and over the past week, show the headline that explains each one beside the move, in one sentence. If there's no matching headline, say so rather than guessing.</p>
+<p>Add a Mock Portfolio page to our tracker, using the workshop server's mock portfolio data: get_holdings for the portfolio, get_prices for the day's prices, get_price_history for charts and get_news for the headlines. Use the same server address, lab account (as <code>table</code>) and access key as before. For the biggest price moves today and over the past week, show the headline that explains each one beside the move, in one sentence. If there's no matching headline, say so rather than guessing.</p>
 </blockquote>
 <ul>
 <li><strong>Try it, then question it.</strong> Pick one explanation and check it against the news yourselves. Is it right? How would you know if it weren't? And look at how the portfolio is split: does anything deserve a warning?</li>
@@ -311,7 +311,7 @@ table.path{border-collapse:collapse;width:100%}table.path th,table.path td{borde
 <p>Stop here. Give us the simplest version that works right now, restart the portal, and tell us what to click to see it. We'll decide what to improve next.</p>
 </blockquote>
 <ul>
-<li><strong>The explanation doesn't match the news (practice portfolio):</strong></li>
+<li><strong>The explanation doesn't match the news (mock portfolio):</strong></li>
 </ul>
 <blockquote>
 <p>The explanation for [company] doesn't match the headline. Show us the price change and the headlines you used, then only explain a move when a headline from get_news matches the company and the day. Otherwise say there's no news for it.</p>

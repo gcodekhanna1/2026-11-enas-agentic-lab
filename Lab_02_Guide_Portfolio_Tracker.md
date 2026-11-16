@@ -153,9 +153,9 @@ So far, your portal shows you made-up prices. Now it's time to connect it to the
 Remember MCP, the "USB-C port" for AI? We built an MCP server for this class, so your portal has tools it can use. For this lab, it serves:
 
 * **Live market quotes:** real prices for real stocks, such as Apple or Nvidia. Market data services usually charge for this; the workshop server fetches the quotes from one on the whole class's behalf and shares them, so your table doesn't need its own paid subscription. The 100 largest companies in the S&P 500 are ready before class starts; any other stock is fetched the first time someone asks for it.
-* **A practice portfolio:** seven made-up companies, with prices, price history and news that line up with the price moves, so a portal can explain *why* something moved. Useful for trying ideas the live market can't give you on demand.
+* **A mock portfolio:** seven made-up companies, with prices, price history and news that line up with the price moves, so a portal can explain *why* something moved. Useful for trying ideas the live market can't give you on demand.
 
-The server lives at `https://mcp.paradigmventures.ai/mcp`.
+The server lives at `https://mcp.paradigmventures.ai/mcp`. [See how it fits together](Lab_02_How_It_Works.html).
 
 ### Make It Live
 
@@ -186,13 +186,13 @@ A tracker that only shows numbers waits for you to notice things. One that warns
 
 * **Want the warning in your inbox?** The workshop server can also email your table's lab account, the same tool Lab 01 uses (`send_reminder`). Ask Claude to add an **Email This Warning** button, and tell it not to send real emails while it tests. You'll send the first one yourselves from the portal.
 
-### Suggestion: Explain Why, with the Practice Portfolio
+### Suggestion: Explain Why, with the Mock Portfolio
 
-The practice portfolio's news lines up with its price moves, so you can build the "why did it move?" feature now and see it work.
+The mock portfolio is seven made-up companies whose news explains every price move, so you can build the "why did it move?" feature now and see it work.
 
-* **Ask Claude to add a Practice Portfolio page:**
+* **Ask Claude to add a Mock Portfolio page:**
 
-> Add a Practice Portfolio page to our tracker, using the workshop server's practice data: get_holdings for the portfolio, get_prices for the day's prices, get_price_history for charts and get_news for the headlines. Use the same server address, lab account (as `table`) and access key as before. For the biggest price moves today and over the past week, show the headline that explains each one beside the move, in one sentence. If there's no matching headline, say so rather than guessing.
+> Add a Mock Portfolio page to our tracker, using the workshop server's mock portfolio data: get_holdings for the portfolio, get_prices for the day's prices, get_price_history for charts and get_news for the headlines. Use the same server address, lab account (as `table`) and access key as before. For the biggest price moves today and over the past week, show the headline that explains each one beside the move, in one sentence. If there's no matching headline, say so rather than guessing.
 
 * **Try it, then question it.** Pick one explanation and check it against the news yourselves. Is it right? How would you know if it weren't? And look at how the portfolio is split: does anything deserve a warning?
 
@@ -278,7 +278,7 @@ Choose what matters most, ask Claude for it in your own words, then test it.
 
 > Stop here. Give us the simplest version that works right now, restart the portal, and tell us what to click to see it. We'll decide what to improve next.
 
-* **The explanation doesn't match the news (practice portfolio):**
+* **The explanation doesn't match the news (mock portfolio):**
 
 > The explanation for [company] doesn't match the headline. Show us the price change and the headlines you used, then only explain a move when a headline from get_news matches the company and the day. Otherwise say there's no news for it.
 

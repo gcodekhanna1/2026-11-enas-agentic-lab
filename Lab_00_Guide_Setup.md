@@ -166,7 +166,7 @@ ollama run qwen3.5:4b --think=false "Give me a short sentence of no more than 10
 </p>
 <br>
 
-## Step 05: Sign In to Your Lab Account
+## Step 05: Sign In to Claude with Your Lab Account
 
 <p class="info"><b>Table leaders only.</b> Do this step once you've received the email telling you which lab account is your table's. Backups: stop after Step 04. If you end up stepping in for your table leader, the teaching team will move the sign-in emails to you, and you'll do Steps 05 and 06 then.</p>
 
@@ -198,6 +198,8 @@ ollama run qwen3.5:4b --think=false "Give me a short sentence of no more than 10
   <img src="Lab_00_Claude_New_Session_Screenshot.png" alt="Claude desktop app when you start a new session, with Cowork selected" width="60%">
 </p>
 <br>
+
+* **Use Opus 5.5 for both labs.** It's the model button to the right of **Cowork**, as in the screenshot above, and it may already be selected. Leave **Effort** on **Medium**.
 
 * Click **Project or folder** and select the folder you made in Step 01.
 

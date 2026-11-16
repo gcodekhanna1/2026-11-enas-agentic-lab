@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 470" width="1120" height="470" font-family="Helvetica, Arial, sans-serif" role="img" aria-labelledby="t d" xmlns:c2pa="http://c2pa.org/manifest">
+  <title id="t">How your tracker gets prices and news from the workshop server</title>
+  <desc id="d">On the table leader's laptop, the portal's code asks for data when the page loads or when you press Refresh, or after a small local model turns a typed question into a fixed format. The request goes over the internet, with the access key, to the workshop MCP server. For real stocks its get_live_quote tool serves prices from a shared cache, fetching from a market data service at most once a minute for the whole class. For the mock portfolio its own tools serve seven made-up companies whose news explains their moves. Its send_reminder tool can email a warning to the table's lab account. The data comes back to the portal, which decides what to show.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#286dc0"/>
+    </marker>
+  </defs>
+  <rect width="1120" height="470" fill="#ffffff"/>
+
+  <!-- the laptop -->
+  <rect x="20" y="40" width="470" height="410" rx="16" fill="#f6f8fb" stroke="#286dc0" stroke-width="2" stroke-dasharray="9 7"/>
+  <text x="255" y="70" text-anchor="middle" font-size="16" font-weight="700" fill="#00356b">THE TABLE LEADER'S LAPTOP</text>
+  <text x="255" y="92" text-anchor="middle" font-size="14" fill="#5a6b80" font-style="italic">Stays on your laptop</text>
+
+  <!-- path 1: refresh -->
+  <text x="135" y="128" text-anchor="middle" font-size="14" font-weight="700" fill="#00356b">Most of the time…</text>
+  <rect x="40" y="138" width="190" height="100" rx="10" fill="#e8eef6" stroke="#286dc0" stroke-width="1.5"/>
+  <text x="135" y="176" text-anchor="middle" font-size="17" font-weight="700" fill="#00356b">The page loads,</text>
+  <text x="135" y="198" text-anchor="middle" font-size="17" font-weight="700" fill="#00356b">or you press Refresh</text>
+  <text x="135" y="222" text-anchor="middle" font-size="13" fill="#3b4a5c">at most once a minute</text>
+
+  <!-- portal's code -->
+  <rect x="280" y="138" width="190" height="120" rx="10" fill="#00356b"/>
+  <text x="375" y="172" text-anchor="middle" font-size="17" font-weight="700" fill="#ffffff">Your portal's code</text>
+  <text x="375" y="196" text-anchor="middle" font-size="13" fill="#d6e2f2">asks, with the access key,</text>
+  <text x="375" y="214" text-anchor="middle" font-size="13" fill="#d6e2f2">then decides what to show:</text>
+  <text x="375" y="232" text-anchor="middle" font-size="13" fill="#d6e2f2">prices, warnings, the why</text>
+  <line x1="230" y1="188" x2="276" y2="188" stroke="#286dc0" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- path 2: chat -->
+  <text x="135" y="302" text-anchor="middle" font-size="14" font-weight="700" fill="#00356b">…or the chat window</text>
+  <rect x="40" y="312" width="190" height="110" rx="10" fill="#e8eef6" stroke="#286dc0" stroke-width="1.5"/>
+  <text x="135" y="348" text-anchor="middle" font-size="17" font-weight="700" fill="#00356b">You ask a question</text>
+  <text x="135" y="372" text-anchor="middle" font-size="13" fill="#3b4a5c" font-style="italic">"How is Nvidia</text>
+  <text x="135" y="390" text-anchor="middle" font-size="13" fill="#3b4a5c" font-style="italic">doing today?"</text>
+  <rect x="280" y="312" width="190" height="110" rx="10" fill="#e8eef6" stroke="#286dc0" stroke-width="1.5"/>
+  <text x="375" y="344" text-anchor="middle" font-size="17" font-weight="700" fill="#00356b">Small Qwen model</text>
+  <text x="375" y="366" text-anchor="middle" font-size="13" fill="#3b4a5c">fills in a fixed format:</text>
+  <text x="375" y="384" text-anchor="middle" font-size="13" fill="#3b4a5c">kind of question, stock</text>
+  <text x="375" y="406" text-anchor="middle" font-size="12" fill="#5a6b80">(no internet needed)</text>
+  <line x1="230" y1="367" x2="276" y2="367" stroke="#286dc0" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <line x1="375" y1="312" x2="375" y2="262" stroke="#286dc0" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- over the internet, both ways -->
+  <line x1="470" y1="170" x2="566" y2="170" stroke="#286dc0" stroke-width="2.5" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+  <text x="522" y="160" text-anchor="middle" font-size="12" font-weight="700" fill="#00356b">asks</text>
+  <text x="522" y="194" text-anchor="middle" font-size="11" fill="#5a6b80">over the</text>
+  <text x="522" y="208" text-anchor="middle" font-size="11" fill="#5a6b80">internet</text>
+  <line x1="566" y1="226" x2="474" y2="226" stroke="#286dc0" stroke-width="2.5" stroke-dasharray="7 5" marker-end="url(#arrow)"/>
+  <text x="522" y="246" text-anchor="middle" font-size="12" font-weight="700" fill="#00356b">answers</text>
+
+  <!-- MCP server -->
+  <rect x="570" y="110" width="220" height="250" rx="10" fill="#286dc0"/>
+  <text x="680" y="142" text-anchor="middle" font-size="17" font-weight="700" fill="#ffffff">Workshop MCP server</text>
+  <text x="680" y="164" text-anchor="middle" font-size="13" fill="#e8eef6">mcp.paradigmventures.ai</text>
+  <text x="680" y="192" text-anchor="middle" font-size="13" fill="#ffffff">its tools:</text>
+  <text x="680" y="218" text-anchor="middle" font-size="14" font-family="Menlo, Consolas, monospace" fill="#ffffff">get_live_quote</text>
+  <text x="680" y="250" text-anchor="middle" font-size="12" font-family="Menlo, Consolas, monospace" fill="#ffffff">get_holdings · get_prices</text>
+  <text x="680" y="268" text-anchor="middle" font-size="12" font-family="Menlo, Consolas, monospace" fill="#ffffff">get_price_history · get_news</text>
+  <text x="680" y="300" text-anchor="middle" font-size="14" font-family="Menlo, Consolas, monospace" fill="#ffffff">send_reminder</text>
+  <text x="680" y="330" text-anchor="middle" font-size="12" fill="#e8eef6">one shared cache for the class</text>
+
+  <!-- market data -->
+  <line x1="790" y1="214" x2="836" y2="105" stroke="#286dc0" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <rect x="840" y="45" width="255" height="105" rx="10" fill="#fff8e6" stroke="#978d85" stroke-width="1.5"/>
+  <text x="967" y="78" text-anchor="middle" font-size="17" font-weight="700" fill="#00356b">Market data service</text>
+  <text x="967" y="100" text-anchor="middle" font-size="13" fill="#3b4a5c">real prices (Twelve Data),</text>
+  <text x="967" y="118" text-anchor="middle" font-size="13" fill="#3b4a5c">fetched once for the whole</text>
+  <text x="967" y="136" text-anchor="middle" font-size="13" fill="#3b4a5c">class, about once a minute</text>
+
+  <!-- mock portfolio -->
+  <line x1="790" y1="258" x2="836" y2="230" stroke="#286dc0" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <rect x="840" y="178" width="255" height="105" rx="10" fill="#fff8e6" stroke="#978d85" stroke-width="1.5"/>
+  <text x="967" y="211" text-anchor="middle" font-size="17" font-weight="700" fill="#00356b">The mock portfolio</text>
+  <text x="967" y="233" text-anchor="middle" font-size="13" fill="#3b4a5c">7 made-up companies, on</text>
+  <text x="967" y="251" text-anchor="middle" font-size="13" fill="#3b4a5c">the server, with news that</text>
+  <text x="967" y="269" text-anchor="middle" font-size="13" fill="#3b4a5c">explains every price move</text>
+
+  <!-- email warning -->
+  <line x1="790" y1="298" x2="836" y2="355" stroke="#286dc0" stroke-width="2.5" marker-end="url(#arrow)"/>
+  <rect x="840" y="311" width="255" height="110" rx="10" fill="#fff8e6" stroke="#978d85" stroke-width="1.5"/>
+  <text x="967" y="342" text-anchor="middle" font-size="17" font-weight="700" fill="#00356b">Your table's inbox</text>
+  <text x="967" y="364" text-anchor="middle" font-size="13" fill="#3b4a5c">optional: an emailed warning,</text>
+  <text x="967" y="382" text-anchor="middle" font-size="13" fill="#3b4a5c">via your lab account, e.g.</text>
+  <text x="967" y="400" text-anchor="middle" font-size="13" fill="#3b4a5c">demo-03@paradigmventures.ai</text>
+<metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTpjYTBhMjMyYi03MTM5LTRhZmYtYWRhYy02ZGYzMDVlNzRlOTcAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaB5nxCTuQnwPoEmdJyOVK9kAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDo5MDViZjU0Mi01MTMwLTRhNTctYjU0My01OWE0MTc2OWM4NDhscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNobYRXmB8srQGDh4Qwl8k3bgAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggzoLygeYnH/E4J3qETtvLgEzM6G4IL4aNeCX7LsAkPWCkZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaI5pnlk2xdQSkX2Vqvvj3K4AAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRMAAAAAAAAAAAAAAAAZGhhc2hYIO6XRtl1l81lLkGFJhjjpu37E1vDPOnc+wXHK+VWzuwSZG5hbWVuanVtYmYgbWFuaWZlc3RqZXhjbHVzaW9uc4GiZXN0YXJ0GR/SZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOmNhMGEyMzJiLTcxMzktNGFmZi1hZGFjLTZkZjMwNWU3NGU5Ny9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOmViODU3ZWIyLTQ4YzQtNDc3My05YjE0LWVhZTc5OWM0ZGZlN3JjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCDOgvKB5icf8TgneoRO28uATMzobggvho14JfsuwCQ9YKJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFgger6mcoN0hrnPbXtsFCWVnbHqcY1/TTieRU41bIabhdeiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFggvyttSX6OoCt4NMz0RUD7pxSvsG05RGkgieDTXEVbrnN0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQDXciAv0GdWgJ4TFfVM6b9gMnGbSFieK4LwgZycdC3470GPiBmyKTZins6Ty7fUjikoU1Isc0er/inHqZoLuhC8=</c2pa:manifest></metadata></svg>
