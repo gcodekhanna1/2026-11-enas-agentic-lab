@@ -1,5 +1,6 @@
 <!--
 ENAS NOTE: this page is public. Names and emails here were approved by Gaurav on 2026-11-05 for the two TAs only, while the site is unlisted.
+On 2026-11-17 Gaurav also approved the three Cisco testers' emails (demo-08 to demo-10).
 Decide separately before adding any student's name. Their emails were also approved. Don't add passwords.
 -->
 
@@ -16,6 +17,6 @@ Decide separately before adding any student's name. Their emails were also appro
 | 5 | demo-05 | `demo-05@paradigmventures.ai` | To be assigned |
 | 6 | demo-06 | `demo-06@paradigmventures.ai` | To be assigned |
 | 7 | demo-07 | `demo-07@paradigmventures.ai` | To be assigned |
-| 8 | demo-08 | `demo-08@paradigmventures.ai` | To be assigned |
-| 9 | demo-09 | `demo-09@paradigmventures.ai` | To be assigned |
-| 10 | demo-10 | `demo-10@paradigmventures.ai` | To be assigned |
+| 8 | demo-08 | `demo-08@paradigmventures.ai` | `sdara@cisco.com` |
+| 9 | demo-09 | `demo-09@paradigmventures.ai` | `jonmarca@cisco.com` |
+| 10 | demo-10 | `demo-10@paradigmventures.ai` | `reby@cisco.com` |
