@@ -73,11 +73,13 @@ You didn't design software just yet. You described your own situation, and those
 
 * Send Claude your answers along with the prompt below. It asks for a *minimum viable product*: the simplest version that actually works, which you'll improve from there.
 
+<p class="info"><b>Hint:</b> Claude handles images and photos as input very well. Photograph your template, whiteboard and sticky notes with a phone and attach the pictures — handwriting, arrows, crossings-out and all. You don't need to type any of it out.</p>
+
 > We're a table of Yale students building a stock and investments tracker for ourselves. It should show how a set of investments is doing, and explain what changed and why, in plain language. It's for tracking and explaining only: it must never tell us what to buy or sell, and it never connects to a real brokerage account. We'll build it step by step: a simple working version first, then we'll improve it.
 >
 > Here are our notes on how we follow investments today, and what we wish we understood.
 >
-> [attach your photos, and add any other notes from your brainstorming]
+> [Paste your notes from the brainstorming worksheet here. If you have photos of sticky notes, the whiteboard or sketches, attach them as well.]
 >
 > Build us an initial minimum viable product that we can further customize working with you.
 >
@@ -88,8 +90,6 @@ You didn't design software just yet. You described your own situation, and those
 > - Sample data so we can see it working right away: about seven well-known stocks, such as Apple (AAPL), Tesla (TSLA), Nvidia (NVDA) and Microsoft (MSFT), with made-up prices and headlines clearly labelled as sample data. Let us keep, remove or add stocks. We'll connect it to live market data later.
 >
 > Before you build anything: ask us up to five questions about whatever is unclear, then show us a mockup using sample data. Wait for us to approve the mockup before you write the real thing.
-
-<p class="info"><b>Hint:</b> Claude handles images and photos as input very well. Photograph your template, whiteboard and sticky notes with a phone and attach the pictures — handwriting, arrows, crossings-out and all. You don't need to type any of it out.</p>
 
 <br>
 
