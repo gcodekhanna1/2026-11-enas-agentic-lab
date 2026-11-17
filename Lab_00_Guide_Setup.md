@@ -178,7 +178,6 @@ ollama run qwen3.5:4b --think=false "Give me a short sentence of no more than 10
 
 * Open that link **on the same Mac** you're signing in from.
 
-<p align="center" style="color:#800000"><b>[PLACEHOLDER - screenshot of the Claude sign-in screen]</b></p>
 <br>
 
 ## Step 06: Check That It Works
@@ -207,7 +206,6 @@ ollama run qwen3.5:4b --think=false "Give me a short sentence of no more than 10
 
 **That's it.** If that worked, you're set until class.
 
-<p align="center" style="color:#800000"><b>[PLACEHOLDER - screenshot of a working Cowork session with the project folder connected]</b></p>
 <br>
 
 ## If Something Doesn't Work
