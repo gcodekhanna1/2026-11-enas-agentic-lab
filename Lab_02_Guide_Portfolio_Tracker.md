@@ -39,7 +39,7 @@ Work as a team to discuss the questions below. Feel free to add some of your own
 
 Remember that we are building and iterating. As a group, use your judgment for when you have done enough discovery to move on to building.
 
-Capture your answers on your template, whiteboard and sticky notes. You'll photograph them and hand them to Claude at the end.
+Capture your answers on your Planning & Discovery Worksheet, whiteboard and sticky notes. You'll photograph them and hand them to Claude at the end.
 
 * **Who Is This For?**
     - A student with their first few hundred dollars invested, a parent, a campus investment club? Pick one person and keep them in mind.
@@ -73,7 +73,7 @@ You didn't design software just yet. You described your own situation, and those
 
 * Send Claude your answers along with the prompt below. It asks for a *minimum viable product*: the simplest version that actually works, which you'll improve from there.
 
-<p class="info"><b>Hint:</b> Claude handles images and photos as input very well. Photograph your template, whiteboard and sticky notes with a phone and attach the pictures — handwriting, arrows, crossings-out and all. You don't need to type any of it out.</p>
+<p class="info"><b>Hint:</b> Claude handles images and photos as input very well. Photograph your worksheet, whiteboard and sticky notes with a phone and attach the pictures — handwriting, arrows, crossings-out and all. You don't need to type any of it out.</p>
 
 > We're a table of Yale students building a stock and investments tracker for ourselves. It should show how a set of investments is doing, and explain what changed and why, in plain language. It's for tracking and explaining only: it must never tell us what to buy or sell, and it never connects to a real brokerage account. We'll build it step by step: a simple working version first, then we'll improve it.
 >

@@ -36,7 +36,7 @@ Work as a team to discuss the questions below. Feel free to add some of your own
 
 Remember that we are building and iterating. As a group, use your judgment for when you have done enough discovery to move on to building.
 
-Capture your answers on your template, whiteboard and sticky notes. You'll photograph them and hand them to Claude at the end.
+Capture your answers on your Planning & Discovery Worksheet, whiteboard and sticky notes. You'll photograph them and hand them to Claude at the end.
 
 * **Where Do You Normally Find Out About Internships?**
     - Public job sites, the Yale career site, a professor, a friend who already works there?
@@ -47,11 +47,11 @@ Capture your answers on your template, whiteboard and sticky notes. You'll photo
 * **What Do You Wish You Could Remember About Each One — Before You Apply, and After?**
     - Deadlines, links, who you emailed, where you stand, what they said.
 
-* **Are You Updating Your Resume / Cover Letter for Each Application? How?**
+* **Are You Tailoring Your Resume / Cover Letter for Each Application? How?**
     - If you tailor them, what do you change, and how long does it take?
 
-* **What Do You Find Out Too Late?**
-    - What are the things you want to be notified about, and when?
+* **What Should It Do for You, Not Just Show?**
+    - Remind you before a deadline, flag an application going stale, draft a follow-up email, surface what's urgent this week. Pick one, and say what triggers it.
 
 * **What Should It Look Like When You Open It?**
     - A list, a calendar, a dashboard of what's urgent, something else? Sketch it.
@@ -70,7 +70,7 @@ You didn't design software just yet. You described your own situation, and those
 
 * Send Claude your answers along with the prompt below. It asks for a *minimum viable product*: the simplest version that actually works, which you'll improve from there.
 
-<p class="info"><b>Hint:</b> Claude handles images and photos as input very well. Photograph your template, whiteboard and sticky notes with a phone and attach the pictures — handwriting, arrows, crossings-out and all. You don't need to type any of it out.</p>
+<p class="info"><b>Hint:</b> Claude handles images and photos as input very well. Photograph your worksheet, whiteboard and sticky notes with a phone and attach the pictures — handwriting, arrows, crossings-out and all. You don't need to type any of it out.</p>
 
 > We're a table of Yale students building an internship planner for ourselves. It should help us keep track of the internships we're applying to, remember deadlines and contacts, and stop finding things out too late. We'll build it step by step: a simple working version first, then we'll improve it.
 >
@@ -143,7 +143,7 @@ Builds take **ten minutes or more**, so this is a good time for a break.
 
 ## Step 07: Make It Do Something
 
-So far, your portal shows you things. Now it's time to make it perform some actions. One thing you may want to add is reminders (you may already have this under "What Do You Find Out Too Late?").
+So far, your portal shows you things. Now it's time to make it perform some actions. One thing you may want to add is reminders (you may already have this under "What Should It Do for You, Not Just Show?").
 
 Remember MCP, the "USB-C port" for AI? We built an MCP server for this class, so your portal has a tool it can use to take actions. One of its tools, `send_reminder`, emails a reminder, with a calendar invite if you give it a date, to your table's lab account, which forwards to your table leader's inbox. It can only send to the lab accounts, which is generally good practice: it keeps personal email addresses masked. The server lives at `https://mcp.paradigmventures.ai/mcp`.
 
@@ -225,7 +225,7 @@ Choose what matters most, ask Claude for it in your own words, then test it.
 
 * **You directed an agent.** It asked, planned, used tools and built — you decided what mattered.
 
-* **A thing that displays is a page. A thing that acts is an agent.** "What Do You Find Out Too Late?" is where yours crossed that line.
+* **A thing that displays is a page. A thing that acts is an agent.** "What Should It Do for You, Not Just Show?" is where yours crossed that line.
 
 <br>
 
