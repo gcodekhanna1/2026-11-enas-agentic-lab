@@ -13,7 +13,7 @@ STYLE GUIDE FOR THE LAB GUIDES (this comment doesn't appear in the preview)
 - Punctuation: full sentences end with a period; no double spaces; use an em dash (—), not --.
 - Spacing: one <br> (with empty lines around it) before each section heading, except the first.
 - ENAS NOTE: one document. The discovery questions and the build steps live together here. Lab 01 is the model: keep the two guides parallel.
-- ENAS NOTE: students write their own prompt. The Answer Sheet is a rescue rope, not the path.
+- ENAS NOTE: students write their own prompt. Need a Nudge? links to Lab_02_Prompt_Ideas, a rescue rope, not the path (renamed from Answer Sheet 11/17).
 - ENAS NOTE: stocks and investments only — no budget variant. Tracking and explaining only: no buy/sell advice, no real brokerage connection.
 -->
 
@@ -244,7 +244,7 @@ Choose what matters most, ask Claude for it in your own words, then test it.
 
 * **Live quotes say "busy" or "stale":** the whole class shares them. Wait a minute and press Refresh.
 
-* **You're out of ideas:** see the Answer Sheet at the bottom.
+* **You're out of ideas:** see **Need a Nudge?** at the bottom.
 
 <br>
 
@@ -262,25 +262,11 @@ Choose what matters most, ask Claude for it in your own words, then test it.
 
 <br>
 
-## Answer Sheet
+## Need a Nudge?
 
-*Use these if your table is stuck. Reading them first spoils the exercise.*
+*Try your own prompts first. They're what make the portal yours.*
 
-* **A worked starting prompt,** for a table building for first-time investors:
-
-> We're a table of Yale students building a stock tracker for a student who has just invested their first $500 and checks it on their phone between classes. When they open it, they want to know in five seconds: am I up or down today, and why? They don't want charts full of numbers, and they never want to be told what to buy or sell. Build us an initial minimum viable product: one page with the total value and the day's change at the top, then each holding with its change and a one-line reason. Use Streamlit, in Python, with uv, one start file, and sample data for a few well-known stocks we can change. Ask us up to five questions first, then show us a mockup and wait for our approval.
-
-* **The portal can't get data from the workshop server:**
-
-> Our portal can't get data from the workshop server. Show us the exact error. Then check: the address ends in /mcp, the access key is read from our settings file, and the code uses the current version of the official `mcp` library. Make one call to get_live_quote for AAPL and show us the result before changing anything else.
-
-* **Claude keeps tuning and nothing changes on screen:**
-
-> Stop here. Give us the simplest version that works right now, restart the portal, and tell us what to click to see it. We'll decide what to improve next.
-
-* **The explanation doesn't match the news (mock portfolio):**
-
-> The explanation for [company] doesn't match the headline. Show us the price change and the headlines you used, then only explain a move when a headline from get_news matches the company and the day. Otherwise say there's no news for it.
+If your table is stuck, here are [a few prompts other tables have tried](Lab_02_Prompt_Ideas.html). Borrow an idea, then put it in your own words.
 
 <br>
 

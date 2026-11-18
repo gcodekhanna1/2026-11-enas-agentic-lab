@@ -13,7 +13,7 @@ STYLE GUIDE FOR THE LAB GUIDES (this comment doesn't appear in the preview)
 - Punctuation: full sentences end with a period; no double spaces; use an em dash (—), not --.
 - Spacing: one <br> (with empty lines around it) before each section heading, except the first.
 - ENAS NOTE: one document. The discovery questions and the build steps live together here.
-- ENAS NOTE: students write their own prompt. The Answer Sheet is a rescue rope, not the path.
+- ENAS NOTE: students write their own prompt. Need a Nudge? links to Lab_01_Prompt_Ideas, a rescue rope, not the path (renamed from Answer Sheet 11/17).
 -->
 
 # Lab 01 — Internship, Discovery and Planner
@@ -213,7 +213,7 @@ Choose what matters most, ask Claude for it in your own words, then test it.
 
 * **The app won't start:** paste the error message back to Claude and ask it to fix it. This is normal and expected — it is not a sign you did something wrong.
 
-* **You're out of ideas:** see the Answer Sheet at the bottom.
+* **You're out of ideas:** see **Need a Nudge?** at the bottom.
 
 <br>
 
@@ -229,11 +229,12 @@ Choose what matters most, ask Claude for it in your own words, then test it.
 
 <br>
 
-## Answer Sheet
+## Need a Nudge?
 
-*Use these if your table is stuck. Reading them first spoils the exercise.*
+*Try your own prompts first. They're what make the portal yours.*
 
-<p align="center" style="color:#800000"><b>[PLACEHOLDER - suggested prompts: a worked starting prompt, a prompt for adding the agentic action, and two recovery prompts for common failures]</b></p>
+If your table is stuck, here are [a few prompts other tables have tried](Lab_01_Prompt_Ideas.html). Borrow an idea, then put it in your own words.
+
 <br>
 
 ## What's Next
