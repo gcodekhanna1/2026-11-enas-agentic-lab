@@ -38,23 +38,23 @@ Remember that we are building and iterating. As a group, use your judgment for w
 
 Capture your answers on your Planning & Discovery Worksheet, whiteboard and sticky notes. You'll photograph them and hand them to Claude at the end.
 
-* **Where Do You Normally Find Out About Internships?**
+* **Where do you normally find out about internships?**
     - Public job sites, the Yale career site, a professor, a friend who already works there?
 
-* **What Frustrates You Most About Applying?**
+* **What frustrates you most about applying?**
     - Be specific. The last time it went badly, what actually went wrong?
 
-* **What Do You Wish You Could Remember About Each One — Before You Apply, and After?**
+* **What do you wish you could remember about each one, before you apply and after?**
     - Deadlines, links, who you emailed, where you stand, what they said.
 
-* **Are You Tailoring Your Resume / Cover Letter for Each Application? How?**
+* **Are you tailoring your resume / cover letter for each application? How?**
     - If you tailor them, what do you change, and how long does it take?
 
-* **What Should It Do for You, Not Just Show?**
+* **What should it DO for you, not just show?**
     - Remind you before a deadline, flag an application going stale, draft a follow-up email, surface what's urgent this week. Pick one, and say what triggers it.
 
-* **What Should It Look Like When You Open It?**
-    - A list, a calendar, a dashboard of what's urgent, something else? Sketch it.
+* **What should it look like when you open it?**
+    - A list, a calendar, a dashboard of what's urgent, something else?
 
 <br>
 
@@ -143,7 +143,7 @@ Builds take **ten minutes or more**, so this is a good time for a break.
 
 ## Step 07: Make It Do Something
 
-So far, your portal shows you things. Now it's time to make it perform some actions. One thing you may want to add is reminders (you may already have this under "What Should It Do for You, Not Just Show?").
+So far, your portal shows you things. Now it's time to make it perform some actions. One thing you may want to add is reminders (you may already have this under "What should it DO for you, not just show?").
 
 Remember MCP, the "USB-C port" for AI? We built an MCP server for this class, so your portal has a tool it can use to take actions. One of its tools, `send_reminder`, emails a reminder, with a calendar invite if you give it a date, to your table's lab account, which forwards to your table leader's inbox. It can only send to the lab accounts, which is generally good practice: it keeps personal email addresses masked. The server lives at `https://mcp.paradigmventures.ai/mcp`.
 
@@ -225,7 +225,7 @@ Choose what matters most, ask Claude for it in your own words, then test it.
 
 * **You directed an agent.** It asked, planned, used tools and built — you decided what mattered.
 
-* **A thing that displays is a page. A thing that acts is an agent.** "What Should It Do for You, Not Just Show?" is where yours crossed that line.
+* **A thing that displays is a page. A thing that acts is an agent.** "What should it DO for you, not just show?" is where yours crossed that line.
 
 <br>
 

@@ -41,23 +41,23 @@ Remember that we are building and iterating. As a group, use your judgment for w
 
 Capture your answers on your Planning & Discovery Worksheet, whiteboard and sticky notes. You'll photograph them and hand them to Claude at the end.
 
-* **Who Is This For?**
+* **Who is this for?**
     - A student with their first few hundred dollars invested, a parent, a campus investment club? Pick one person and keep them in mind.
 
-* **How Do You Follow Investments Today?**
-    - A brokerage app, news alerts, a group chat, social media, not at all? What works, and what's annoying?
+* **How do you follow investments today?**
+    - A brokerage app, news alerts, a group chat, social media, not at all? What works? What's annoying?
 
-* **When a Price Moves, What Do You Wish You Understood?**
-    - Why did it move? Is it a big move for this company, or a normal day? Did anything happen in the news?
+* **When a price moves, what do you wish you understood?**
+    - Why did it move? Is it a big move for this company or a normal day? Did anything happen in the news?
 
-* **What Should It Warn You About?**
+* **What should it warn you about?**
     - A big drop, too much of your money in one company, news about something you own? When would you want to hear about it?
 
-* **What Would You Never Want It to Do?**
+* **What would you never want it to do?**
     - Where's the line between a tool that explains and a tool that tells you what to do? Write down two things it must not do.
 
-* **What Should It Look Like When You Open It?**
-    - One big number, a list, a chart, a short summary of the day? Sketch it.
+* **What should it look like when you open it?**
+    - One big number, a list, a chart, a short summary of the day?
 
 <br>
 
